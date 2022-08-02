@@ -18,8 +18,6 @@
 
 #pragma mark - Module
 
-#import "WeatherHeader.h"
-
 #pragma mark - Others
 
 #import <YYKit.h>

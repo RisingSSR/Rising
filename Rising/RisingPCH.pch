@@ -8,6 +8,10 @@
 #ifndef RisingPCH_pch
 #define RisingPCH_pch
 
+#import "RisingRouter.h"
 
+#import "ExtensionHeader.h"
+
+#import <YYKit.h>
 
 #endif /* RisingPCH_pch */

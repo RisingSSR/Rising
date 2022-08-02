@@ -11,6 +11,15 @@
 		14CDC7D2289911720009358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D1289911720009358F /* Assets.xcassets */; };
 		14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D3289911720009358F /* LaunchScreen.storyboard */; };
 		14CDC7D8289911720009358F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7D7289911720009358F /* main.m */; };
+		14CDC7E9289915610009358F /* RisingRouterResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E1289915610009358F /* RisingRouterResponse.m */; };
+		14CDC7EA289915610009358F /* RisingRouter+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E3289915610009358F /* RisingRouter+Extension.m */; };
+		14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E5289915610009358F /* RisingRouterRequest.m */; };
+		14CDC7EC289915610009358F /* RisingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E7289915610009358F /* RisingRouter.m */; };
+		14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F0289915710009358F /* NSDate+Rising.m */; };
+		14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F1289915710009358F /* RisingFoundationExtention.m */; };
+		14CDC7FF289915710009358F /* UIView+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F7289915710009358F /* UIView+Rising.m */; };
+		14CDC800289915710009358F /* RisingUIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F8289915710009358F /* RisingUIKitExtension.m */; };
+		14CDC801289915710009358F /* UIColor+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7FB289915710009358F /* UIColor+Rising.m */; };
 		F57CBEFF8EFB2D2137A76C93 /* Pods_Rising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +31,27 @@
 		14CDC7D4289911720009358F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14CDC7D6289911720009358F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CDC7D7289911720009358F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		14CDC7DE2899145E0009358F /* RisingPCH.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingPCH.pch; sourceTree = "<group>"; };
+		14CDC7E0289915610009358F /* RisingRouterRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingRouterRequest.h; sourceTree = "<group>"; };
+		14CDC7E1289915610009358F /* RisingRouterResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingRouterResponse.m; sourceTree = "<group>"; };
+		14CDC7E2289915610009358F /* RisingRouter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingRouter.h; sourceTree = "<group>"; };
+		14CDC7E3289915610009358F /* RisingRouter+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RisingRouter+Extension.m"; sourceTree = "<group>"; };
+		14CDC7E4289915610009358F /* RisingRouterHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingRouterHandler.h; sourceTree = "<group>"; };
+		14CDC7E5289915610009358F /* RisingRouterRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingRouterRequest.m; sourceTree = "<group>"; };
+		14CDC7E6289915610009358F /* RisingRouter+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RisingRouter+Extension.h"; sourceTree = "<group>"; };
+		14CDC7E7289915610009358F /* RisingRouter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingRouter.m; sourceTree = "<group>"; };
+		14CDC7E8289915610009358F /* RisingRouterResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingRouterResponse.h; sourceTree = "<group>"; };
+		14CDC7EF289915710009358F /* RisingFoundationExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingFoundationExtension.h; sourceTree = "<group>"; };
+		14CDC7F0289915710009358F /* NSDate+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Rising.m"; sourceTree = "<group>"; };
+		14CDC7F1289915710009358F /* RisingFoundationExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingFoundationExtention.m; sourceTree = "<group>"; };
+		14CDC7F2289915710009358F /* NSDate+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Rising.h"; sourceTree = "<group>"; };
+		14CDC7F3289915710009358F /* ExtensionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionHeader.h; sourceTree = "<group>"; };
+		14CDC7F6289915710009358F /* UIView+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Rising.h"; sourceTree = "<group>"; };
+		14CDC7F7289915710009358F /* UIView+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rising.m"; sourceTree = "<group>"; };
+		14CDC7F8289915710009358F /* RisingUIKitExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingUIKitExtension.m; sourceTree = "<group>"; };
+		14CDC7FA289915710009358F /* UIColor+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Rising.h"; sourceTree = "<group>"; };
+		14CDC7FB289915710009358F /* UIColor+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Rising.m"; sourceTree = "<group>"; };
+		14CDC7FC289915710009358F /* RisingUIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingUIKitExtension.h; sourceTree = "<group>"; };
 		22D3780331E63334F8D16391 /* Pods-Rising.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.release.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.release.xcconfig"; sourceTree = "<group>"; };
 		393C19EACBBEA0BF43A6E5A8 /* Pods-Rising.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.debug.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rising.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,12 +101,81 @@
 			children = (
 				14CDC7C5289911720009358F /* AppDelegate.h */,
 				14CDC7C6289911720009358F /* AppDelegate.m */,
+				14CDC7DF289915610009358F /* RisingRouter */,
+				14CDC7ED289915710009358F /* Extension */,
+				14CDC7DE2899145E0009358F /* RisingPCH.pch */,
 				14CDC7D1289911720009358F /* Assets.xcassets */,
 				14CDC7D3289911720009358F /* LaunchScreen.storyboard */,
 				14CDC7D6289911720009358F /* Info.plist */,
 				14CDC7D7289911720009358F /* main.m */,
 			);
 			path = Rising;
+			sourceTree = "<group>";
+		};
+		14CDC7DF289915610009358F /* RisingRouter */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7E0289915610009358F /* RisingRouterRequest.h */,
+				14CDC7E1289915610009358F /* RisingRouterResponse.m */,
+				14CDC7E2289915610009358F /* RisingRouter.h */,
+				14CDC7E3289915610009358F /* RisingRouter+Extension.m */,
+				14CDC7E4289915610009358F /* RisingRouterHandler.h */,
+				14CDC7E5289915610009358F /* RisingRouterRequest.m */,
+				14CDC7E6289915610009358F /* RisingRouter+Extension.h */,
+				14CDC7E7289915610009358F /* RisingRouter.m */,
+				14CDC7E8289915610009358F /* RisingRouterResponse.h */,
+			);
+			path = RisingRouter;
+			sourceTree = "<group>";
+		};
+		14CDC7ED289915710009358F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7EE289915710009358F /* FoundationExtension */,
+				14CDC7F3289915710009358F /* ExtensionHeader.h */,
+				14CDC7F4289915710009358F /* UIKit Extension */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		14CDC7EE289915710009358F /* FoundationExtension */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7EF289915710009358F /* RisingFoundationExtension.h */,
+				14CDC7F0289915710009358F /* NSDate+Rising.m */,
+				14CDC7F1289915710009358F /* RisingFoundationExtention.m */,
+				14CDC7F2289915710009358F /* NSDate+Rising.h */,
+			);
+			path = FoundationExtension;
+			sourceTree = "<group>";
+		};
+		14CDC7F4289915710009358F /* UIKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7F5289915710009358F /* UIView+Rising */,
+				14CDC7F8289915710009358F /* RisingUIKitExtension.m */,
+				14CDC7F9289915710009358F /* UIColor+Rising */,
+				14CDC7FC289915710009358F /* RisingUIKitExtension.h */,
+			);
+			path = "UIKit Extension";
+			sourceTree = "<group>";
+		};
+		14CDC7F5289915710009358F /* UIView+Rising */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7F6289915710009358F /* UIView+Rising.h */,
+				14CDC7F7289915710009358F /* UIView+Rising.m */,
+			);
+			path = "UIView+Rising";
+			sourceTree = "<group>";
+		};
+		14CDC7F9289915710009358F /* UIColor+Rising */ = {
+			isa = PBXGroup;
+			children = (
+				14CDC7FA289915710009358F /* UIColor+Rising.h */,
+				14CDC7FB289915710009358F /* UIColor+Rising.m */,
+			);
+			path = "UIColor+Rising";
 			sourceTree = "<group>";
 		};
 		EDFDED82C5DB7275A1C54868 /* Frameworks */ = {
@@ -200,8 +299,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14CDC7EA289915610009358F /* RisingRouter+Extension.m in Sources */,
+				14CDC7FF289915710009358F /* UIView+Rising.m in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
+				14CDC801289915710009358F /* UIColor+Rising.m in Sources */,
+				14CDC7EC289915610009358F /* RisingRouter.m in Sources */,
+				14CDC800289915710009358F /* RisingUIKitExtension.m in Sources */,
+				14CDC7E9289915610009358F /* RisingRouterResponse.m in Sources */,
 				14CDC7D8289911720009358F /* main.m in Sources */,
+				14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */,
+				14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */,
+				14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +365,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -314,6 +423,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -339,6 +449,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 727CVV9PLJ;
 				EXCLUDED_ARCHS = arm64;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Rising/RisingPCH.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rising/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -368,6 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 727CVV9PLJ;
 				EXCLUDED_ARCHS = arm64;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Rising/RisingPCH.pch";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Rising/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

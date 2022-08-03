@@ -7,7 +7,15 @@
 
 #import "MainController.h"
 
+#import "MinePresenter.h"
+
 @interface MainController ()
+
+/// <#description#>
+@property (nonatomic, strong) UICollectionView *cv;
+
+/// <#description#>
+@property (nonatomic, strong) MinePresenter *presenter;
 
 @end
 
@@ -16,7 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.redColor;
+    
+    
 }
+
+
 
 #pragma mark - RisingRouterHandler
 

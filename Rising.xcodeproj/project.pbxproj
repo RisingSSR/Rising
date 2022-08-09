@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14626B9B28A254CB00659D16 /* KlotskiTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14626B9A28A254CB00659D16 /* KlotskiTabController.m */; };
 		14CDC7C7289911720009358F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7C6289911720009358F /* AppDelegate.m */; };
 		14CDC7D2289911720009358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D1289911720009358F /* Assets.xcassets */; };
 		14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D3289911720009358F /* LaunchScreen.storyboard */; };
@@ -27,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14626B9928A254CB00659D16 /* KlotskiTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlotskiTabController.h; sourceTree = "<group>"; };
+		14626B9A28A254CB00659D16 /* KlotskiTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlotskiTabController.m; sourceTree = "<group>"; };
 		14CDC7C2289911720009358F /* Rising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CDC7C5289911720009358F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CDC7C6289911720009358F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,6 +126,8 @@
 				14CDC7D3289911720009358F /* LaunchScreen.storyboard */,
 				14CDC7D6289911720009358F /* Info.plist */,
 				14CDC7D7289911720009358F /* main.m */,
+				14626B9928A254CB00659D16 /* KlotskiTabController.h */,
+				14626B9A28A254CB00659D16 /* KlotskiTabController.m */,
 			);
 			path = Rising;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				14CDC84428995E070009358F /* MinePresenter.m in Sources */,
 				14CDC84728995E110009358F /* MineModel.m in Sources */,
 				14CDC7FF289915710009358F /* UIView+Rising.m in Sources */,
+				14626B9B28A254CB00659D16 /* KlotskiTabController.m in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
 				14CDC801289915710009358F /* UIColor+Rising.m in Sources */,
 				14CDC804289915BF0009358F /* MainController.m in Sources */,

@@ -19,6 +19,7 @@ target 'Rising' do
 	pod 'FluentDarkModeKit'
 	pod 'JWT'
 	pod 'SDWebImage'
+	pod 'Router'
 
 end
 

@@ -37,7 +37,7 @@
 - (UITabBar *)klotskiTabBar {
     if (_klotskiTabBar == nil) {
         _klotskiTabBar = [[UITabBar alloc] initWithFrame:CGRectMake(0, 0, self.view.width - 200, 49)];
-        _klotskiTabBar.bottom = tabBarTop(self);
+//        _klotskiTabBar.bottom = tabBarTop(self);
         _klotskiTabBar.centerX = self.view.width / 2;
         
         _klotskiTabBar.layer.cornerRadius = _klotskiTabBar.height / 2;
@@ -131,7 +131,7 @@
         return;
     }
     
-    CGFloat top = tabBarTop((KlotskiTabController *)self);
+    CGFloat top = 0;
     
     [UIView
      animateWithDuration:(animated ? 0.5 : 0)

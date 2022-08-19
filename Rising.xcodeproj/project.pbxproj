@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		14626B9B28A254CB00659D16 /* KlotskiTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14626B9A28A254CB00659D16 /* KlotskiTabController.m */; };
+		14A92BE528A4DB4C00D6ACB0 /* ScrollB.m in Sources */ = {isa = PBXBuildFile; fileRef = 14A92BE428A4DB4C00D6ACB0 /* ScrollB.m */; };
 		14CDC7C7289911720009358F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7C6289911720009358F /* AppDelegate.m */; };
 		14CDC7D2289911720009358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D1289911720009358F /* Assets.xcassets */; };
 		14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D3289911720009358F /* LaunchScreen.storyboard */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		14626B9928A254CB00659D16 /* KlotskiTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KlotskiTabController.h; sourceTree = "<group>"; };
 		14626B9A28A254CB00659D16 /* KlotskiTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KlotskiTabController.m; sourceTree = "<group>"; };
+		14A92BE328A4DB4C00D6ACB0 /* ScrollB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScrollB.h; sourceTree = "<group>"; };
+		14A92BE428A4DB4C00D6ACB0 /* ScrollB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollB.m; sourceTree = "<group>"; };
 		14CDC7C2289911720009358F /* Rising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CDC7C5289911720009358F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CDC7C6289911720009358F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				14CDC84328995E070009358F /* MinePresenter.m */,
 				14CDC802289915BF0009358F /* MainController.h */,
 				14CDC803289915BF0009358F /* MainController.m */,
+				14A92BE328A4DB4C00D6ACB0 /* ScrollB.h */,
+				14A92BE428A4DB4C00D6ACB0 /* ScrollB.m */,
 				14CDC84528995E110009358F /* MineModel.h */,
 				14CDC84628995E110009358F /* MineModel.m */,
 				14CDC7DF289915610009358F /* RisingRouter */,
@@ -324,6 +329,7 @@
 				14CDC84728995E110009358F /* MineModel.m in Sources */,
 				14CDC7FF289915710009358F /* UIView+Rising.m in Sources */,
 				14626B9B28A254CB00659D16 /* KlotskiTabController.m in Sources */,
+				14A92BE528A4DB4C00D6ACB0 /* ScrollB.m in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
 				14CDC801289915710009358F /* UIColor+Rising.m in Sources */,
 				14CDC804289915BF0009358F /* MainController.m in Sources */,

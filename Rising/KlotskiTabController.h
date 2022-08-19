@@ -22,9 +22,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_INLINE CGFloat tabBarTop(KlotskiTabController *controller) {
-    return controller.view.frame.size.height - UIDevice.statusBarHeight - controller.mainTabBar.frame.size.height;
-}
+//NS_INLINE CGFloat tabBarTop(KlotskiTabController *controller) {
+//    return controller.view.frame.size.height - UIDevice.statusBarHeight - controller.mainTabBar.frame.size.height;
+//}
 
 @interface UITabBarController (Rising)
 

@@ -9,4 +9,13 @@
 
 @implementation MineModel
 
+- (nonnull id<NSObject>)diffIdentifier {
+    return self.name;
+}
+
+- (BOOL)isEqualToDiffableObject:(nullable id<IGListDiffable>)object {
+    MineModel *old = (MineModel *)object;
+    return [self.name isEqualToString:old.name];
+}
+
 @end

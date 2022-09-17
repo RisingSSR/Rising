@@ -17,7 +17,7 @@ static RisingRouter *_router;
 @interface RisingRouter ()
 
 /// 存储所有被路由的类
-@property (nonatomic, strong) NSMutableDictionary <NSString *, Class> *moduleDic;
+@property (nonatomic, strong) NSMutableDictionary <NSString *, Class> *classChache;
 
 /// 请求对象
 @property (nonatomic, weak) id requestObj;
@@ -33,7 +33,7 @@ static RisingRouter *_router;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.moduleDic = NSMutableDictionary.dictionary;
+        self.classChache = NSMutableDictionary.dictionary;
         int count = objc_getClassList(NULL, 0);
         Class *classes = (Class *)malloc(sizeof(Class) * count);
         objc_getClassList(classes, count);
@@ -50,7 +50,7 @@ static RisingRouter *_router;
                 
                 NSArray <NSString *> *paths = [(id<RisingRouterHandler>)thisCls routerPath];
                 for (NSString *routerPath in paths) {
-                    self.moduleDic[routerPath] = thisCls;
+                    self.classChache[routerPath] = thisCls;
                 }
                 
                 break;
@@ -80,7 +80,7 @@ static RisingRouter *_router;
         request.requestController = self.requestObj;
     }
     
-    Class <RisingRouterHandler> handlerObj = self.moduleDic[request.responsePath];
+    Class <RisingRouterHandler> handlerObj = self.classChache[request.responsePath];
     
     if (handlerObj) {
         __block RisingRouterResponse *response;

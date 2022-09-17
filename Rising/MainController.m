@@ -7,92 +7,87 @@
 
 #import "MainController.h"
 
-#import "ScrollB.h"
+#import "MainCollectionViewCell.h"
 
-@interface MainController () <UIScrollViewDelegate>
+#import "MainDetailCollectionViewCell.h"
 
-/// <#description#>
-@property (nonatomic, strong) UIScrollView *scrollA;
+@interface MainController () <
+    UICollectionViewDelegate,
+    UICollectionViewDataSource,
+    UICollectionViewDelegateFlowLayout
+>
 
-/// <#description#>
-@property (nonatomic, strong) ScrollB *scrollB;
-
-/// <#description#>
-@property (nonatomic) BOOL enableFatherViewScroll;
-
-/// <#description#>
-@property (nonatomic) BOOL enableChildViewScroll;
+/// a
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
 @implementation MainController
 
+#pragma mark - Life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = UIColor.whiteColor;
     
-//    [self.view addSubview:self.scrollA];
-//    [self.scrollA addSubview:self.scrollB];
+    self.view.backgroundColor = UIColor.whiteColor;
+    [self test];
+    
 }
 
-- (UIScrollView *)scrollA {
-    if (_scrollA == nil) {
-        _scrollA = [[UIScrollView alloc] initWithFrame:CGRectMake(50, 100, 200, 400)];
-        _scrollA.backgroundColor = UIColor.orangeColor;
-        _scrollA.contentSize = CGSizeMake(0, 800);
-        _scrollA.delegate = self;
+#pragma mark - Method
+
+- (void)test {
+    NSString *str = [NSDate.date stringWithFormat:@"EEE" timeZone:NSTimeZone.CQ locale:NSLocale.CN];
+    RisingDetailLog(@"%@", str);
+
+}
+
+// MARK: SEL
+
+#pragma mark - Getter
+
+- (UICollectionView *)collectionView {
+    if (_collectionView == nil) {
+        UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+        layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+        
+        _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:layout];
+        [_collectionView registerClass:MainCollectionViewCell.class forCellWithReuseIdentifier:MainCollectionViewCellReuseIdentifier];
+        [_collectionView registerClass:MainDetailCollectionViewCell.class forCellWithReuseIdentifier:MainDetailCollectionViewCellReuseIdentifier];
+        
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
     }
-    return _scrollA;
+    return _collectionView;
 }
 
-- (ScrollB *)scrollB {
-    if (_scrollB == nil) {
-        _scrollB = [[ScrollB alloc] initWithFrame:CGRectMake(50, 50, 100, 200)];
-        _scrollB.backgroundColor = UIColor.redColor;
-        _scrollB.contentSize = CGSizeMake(0, 800);
-//        _scrollB.bounces = NO;
-        _scrollB.delegate = self;
-    }
-    return _scrollB;
+#pragma mark - <UICollectionViewDataSource>
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return 10;
 }
 
-#pragma mark - <UIScrollViewDelegate>
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    CGFloat contentOffset = 20;
-    // 如果是大的
-    if (scrollView == self.scrollA) {
-        // 且自己不能滑动
-        if (!self.enableFatherViewScroll) {
-            // 自己永远在这个offset
-            scrollView.contentOffset = CGPointMake(0, contentOffset);
-            // 并且让自己的子视图可以操作
-            self.enableChildViewScroll = YES;
-        } else {
-        // 自己能滑动
-            if (scrollView.contentOffset.y >= contentOffset) {
-                // 且视图是下拉，自己视图下拉
-                scrollView.contentOffset = CGPointMake(0, contentOffset);
-                if (self.enableFatherViewScroll) {
-                    // 如果自己允许滑动
-                    self.enableFatherViewScroll = NO;
-                    self.enableChildViewScroll = YES;
-                }
-            }
-        }
-    } else {
-    // 如果是小的滑动
-        if (!self.enableChildViewScroll) {
-            // 并且小的能滑动，则
-            scrollView.contentOffset = CGPointMake(0, 0);
-        } else {
-            if (scrollView.contentOffset.y <= 0) {
-                self.enableChildViewScroll = NO;
-                self.enableFatherViewScroll = YES;
-            }
-        }
-    }
+- (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MainCollectionViewCellReuseIdentifier forIndexPath:indexPath];
+    
+    cell.backgroundColor = UIColor.redColor;
+    
+    
+    return cell;
 }
+
+#pragma mark - <UICollectionViewDelegate>
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
+
+#pragma mark - <UICollectionViewDelegateFlowLayout>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return collectionView.frame.size;
+}
+
 
 #pragma mark - RisingRouterHandler
 

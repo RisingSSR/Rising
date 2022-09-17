@@ -19,7 +19,8 @@ target 'Rising' do
 	pod 'FluentDarkModeKit'
 	pod 'JWT'
 	pod 'SDWebImage'
-	pod 'Router'
+	pod 'BeeHive'
+	pod 'CTMediator'
 
 end
 

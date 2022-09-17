@@ -48,7 +48,6 @@ typedef NS_ENUM(NSUInteger, RisingRouterRequestType) {
 
 - (instancetype)init NS_UNAVAILABLE;
 
-+ (instancetype)new NS_UNAVAILABLE;
 
 /// 外链转Request
 /// @param url 只要一个URL就够了

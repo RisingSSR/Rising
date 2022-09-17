@@ -16,6 +16,8 @@
 
 #import "RisingRouterRequest.h"
 
+#import "RisingRouterCS.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
 /// 路由的类路由后可选择接受回掉，
@@ -38,7 +40,39 @@ typedef void(^RisingRouterCompletionBlock)(RisingRouterRequest *request, RisingR
 - (void)handleRequest:(RisingRouterRequest *)request
            complition:(_Nullable RisingRouterCompletionBlock)completion;
 
+
+
+
+
+
+
+
+//- (void)registerName:(NSString *)name response:(RisingRouterCS *)client;
+
+- (void)requestRouterName:(NSString *)name
+                parameter:(NSDictionary *)parameter;
+
 @end
+
+
+@interface RisingRouter (aa)
+
+- (void)registerClass:(Class <RisingRouterHandler>)someClass;
+
+- (void)registerName:(NSString *)name response:(void (^ _Nullable)(NSDictionary *pram))responseBlock;
+
+- (void)registerName:(NSString *)name responseProtocol:(void (^ _Nullable)(id <RisingRouterHandler> item))protocolBlcok;
+
+@end
+
+
+
+
+
+
+
+
+
 
 #pragma mark - NSObject (RisingRouter)
 

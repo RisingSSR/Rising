@@ -20,8 +20,6 @@
 
 #pragma mark - Others
 
-#import <YYKit.h>
-
 #import <MJExtension.h>
 
 #endif /* ExtensionHeader_h */

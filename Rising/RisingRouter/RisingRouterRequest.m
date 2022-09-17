@@ -62,7 +62,7 @@
 #pragma mark - Getter
 
 + (UIViewController *)useTopController {
-    return UIApplication.topViewController;
+    return nil;
 }
 
 @end

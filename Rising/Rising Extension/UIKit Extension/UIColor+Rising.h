@@ -21,7 +21,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIColor (Rising)
+@interface UIColor (Rising_YY)
 
 /**
  Creates and returns a color object from hex string.
@@ -41,5 +41,22 @@ NS_ASSUME_NONNULL_BEGIN
 @end
 
 NS_ASSUME_NONNULL_END
+
+#endif
+
+#if __has_include(<UIColor+DarkModeKit.h>)
+#import <UIColor+DarkModeKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface UIColor (Rising_DM)
+
+/// dm_colorWithLightColor:darkColor:
++ (UIColor *)Light:(UIColor *)lightColor Dark:(UIColor *)darkColor;
+
+@end
+
+NS_ASSUME_NONNULL_END
+
 
 #endif

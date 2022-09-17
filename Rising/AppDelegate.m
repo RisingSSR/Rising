@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 
+#import "RisingRouter/RisingRouter+Extension.h"
+
 @interface AppDelegate ()
 
 @end

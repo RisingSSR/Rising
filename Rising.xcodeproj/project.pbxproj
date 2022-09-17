@@ -20,6 +20,7 @@
 		1474674F28CC914600141947 /* RisingRouterCS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1474674E28CC914600141947 /* RisingRouterCS.m */; };
 		1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477BE8B28D5AFB6001B1CFD /* UIView+Rising.m */; };
 		1477BE8D28D5B300001B1CFD /* UIColor+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7FB289915710009358F /* UIColor+Rising.m */; };
+		1477BE9128D5B9BA001B1CFD /* RisingNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477BE9028D5B9BA001B1CFD /* RisingNetManager.m */; };
 		14CDC7C7289911720009358F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7C6289911720009358F /* AppDelegate.m */; };
 		14CDC7D2289911720009358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D1289911720009358F /* Assets.xcassets */; };
 		14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D3289911720009358F /* LaunchScreen.storyboard */; };
@@ -30,10 +31,8 @@
 		14CDC7EC289915610009358F /* RisingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E7289915610009358F /* RisingRouter.m */; };
 		14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F0289915710009358F /* NSDate+Rising.m */; };
 		14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F1289915710009358F /* RisingFoundationExtention.m */; };
-		14CDC800289915710009358F /* RisingUIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F8289915710009358F /* RisingUIKitExtension.m */; };
 		14CDC804289915BF0009358F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC803289915BF0009358F /* MainController.m */; };
 		14CDC84428995E070009358F /* MinePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC84328995E070009358F /* MinePresenter.m */; };
-		14CDC84728995E110009358F /* MineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC84628995E110009358F /* MineModel.m */; };
 		14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14D0F25D28CC8C5C00C8B80B /* Test.mm */; };
 		F57CBEFF8EFB2D2137A76C93 /* Pods_Rising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */; };
 /* End PBXBuildFile section */
@@ -80,6 +79,9 @@
 		1474674E28CC914600141947 /* RisingRouterCS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RisingRouterCS.m; sourceTree = "<group>"; };
 		1477BE8A28D5AFB6001B1CFD /* UIView+Rising.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Rising.h"; sourceTree = "<group>"; };
 		1477BE8B28D5AFB6001B1CFD /* UIView+Rising.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Rising.m"; sourceTree = "<group>"; };
+		1477BE8E28D5B94E001B1CFD /* RisingExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingExtension.h; sourceTree = "<group>"; };
+		1477BE8F28D5B9BA001B1CFD /* RisingNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingNetManager.h; sourceTree = "<group>"; };
+		1477BE9028D5B9BA001B1CFD /* RisingNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RisingNetManager.m; sourceTree = "<group>"; };
 		14CDC7C2289911720009358F /* Rising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CDC7C5289911720009358F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CDC7C6289911720009358F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -101,8 +103,6 @@
 		14CDC7F0289915710009358F /* NSDate+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Rising.m"; sourceTree = "<group>"; };
 		14CDC7F1289915710009358F /* RisingFoundationExtention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingFoundationExtention.m; sourceTree = "<group>"; };
 		14CDC7F2289915710009358F /* NSDate+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Rising.h"; sourceTree = "<group>"; };
-		14CDC7F3289915710009358F /* ExtensionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExtensionHeader.h; sourceTree = "<group>"; };
-		14CDC7F8289915710009358F /* RisingUIKitExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RisingUIKitExtension.m; sourceTree = "<group>"; };
 		14CDC7FA289915710009358F /* UIColor+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Rising.h"; sourceTree = "<group>"; };
 		14CDC7FB289915710009358F /* UIColor+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Rising.m"; sourceTree = "<group>"; };
 		14CDC7FC289915710009358F /* RisingUIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingUIKitExtension.h; sourceTree = "<group>"; };
@@ -110,10 +110,9 @@
 		14CDC803289915BF0009358F /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
 		14CDC84228995E070009358F /* MinePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePresenter.h; sourceTree = "<group>"; };
 		14CDC84328995E070009358F /* MinePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePresenter.m; sourceTree = "<group>"; };
-		14CDC84528995E110009358F /* MineModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineModel.h; sourceTree = "<group>"; };
-		14CDC84628995E110009358F /* MineModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineModel.m; sourceTree = "<group>"; };
 		14D0F25C28CC8C5C00C8B80B /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		14D0F25D28CC8C5C00C8B80B /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
+		14F989E928D5C230008DBF15 /* RisingSigleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingSigleClass.h; sourceTree = "<group>"; };
 		22D3780331E63334F8D16391 /* Pods-Rising.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.release.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.release.xcconfig"; sourceTree = "<group>"; };
 		393C19EACBBEA0BF43A6E5A8 /* Pods-Rising.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.debug.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rising.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,10 +193,10 @@
 				1434662D28D43F32001DB1D0 /* MainDetailCollectionViewCell.h */,
 				1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */,
 				14211F4128C9B99D00E74D30 /* RTest.swift */,
-				14CDC84528995E110009358F /* MineModel.h */,
-				14CDC84628995E110009358F /* MineModel.m */,
+				14F989EA28D5D54A008DBF15 /* RisingNetManager */,
+				14F989E928D5C230008DBF15 /* RisingSigleClass.h */,
 				14CDC7DF289915610009358F /* RisingRouter */,
-				14CDC7ED289915710009358F /* Extension */,
+				14CDC7ED289915710009358F /* Rising Extension */,
 				14CDC7DE2899145E0009358F /* RisingPCH.pch */,
 				14CDC7D1289911720009358F /* Assets.xcassets */,
 				14CDC7D3289911720009358F /* LaunchScreen.storyboard */,
@@ -228,17 +227,17 @@
 			path = RisingRouter;
 			sourceTree = "<group>";
 		};
-		14CDC7ED289915710009358F /* Extension */ = {
+		14CDC7ED289915710009358F /* Rising Extension */ = {
 			isa = PBXGroup;
 			children = (
-				14CDC7F3289915710009358F /* ExtensionHeader.h */,
-				14CDC7EE289915710009358F /* FoundationExtension */,
+				1477BE8E28D5B94E001B1CFD /* RisingExtension.h */,
+				14CDC7EE289915710009358F /* Foundation Extension */,
 				14CDC7F4289915710009358F /* UIKit Extension */,
 			);
-			path = Extension;
+			path = "Rising Extension";
 			sourceTree = "<group>";
 		};
-		14CDC7EE289915710009358F /* FoundationExtension */ = {
+		14CDC7EE289915710009358F /* Foundation Extension */ = {
 			isa = PBXGroup;
 			children = (
 				14CDC7EF289915710009358F /* RisingFoundationExtension.h */,
@@ -246,20 +245,28 @@
 				14CDC7F2289915710009358F /* NSDate+Rising.h */,
 				14CDC7F0289915710009358F /* NSDate+Rising.m */,
 			);
-			path = FoundationExtension;
+			path = "Foundation Extension";
 			sourceTree = "<group>";
 		};
 		14CDC7F4289915710009358F /* UIKit Extension */ = {
 			isa = PBXGroup;
 			children = (
 				14CDC7FC289915710009358F /* RisingUIKitExtension.h */,
-				14CDC7F8289915710009358F /* RisingUIKitExtension.m */,
 				1477BE8A28D5AFB6001B1CFD /* UIView+Rising.h */,
 				1477BE8B28D5AFB6001B1CFD /* UIView+Rising.m */,
 				14CDC7FA289915710009358F /* UIColor+Rising.h */,
 				14CDC7FB289915710009358F /* UIColor+Rising.m */,
 			);
 			path = "UIKit Extension";
+			sourceTree = "<group>";
+		};
+		14F989EA28D5D54A008DBF15 /* RisingNetManager */ = {
+			isa = PBXGroup;
+			children = (
+				1477BE8F28D5B9BA001B1CFD /* RisingNetManager.h */,
+				1477BE9028D5B9BA001B1CFD /* RisingNetManager.m */,
+			);
+			path = RisingNetManager;
 			sourceTree = "<group>";
 		};
 		EDFDED82C5DB7275A1C54868 /* Frameworks */ = {
@@ -430,7 +437,6 @@
 				1434662F28D43F32001DB1D0 /* MainDetailCollectionViewCell.m in Sources */,
 				14CDC7EA289915610009358F /* RisingRouter+Extension.m in Sources */,
 				14CDC84428995E070009358F /* MinePresenter.m in Sources */,
-				14CDC84728995E110009358F /* MineModel.m in Sources */,
 				14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */,
 				1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
@@ -439,10 +445,10 @@
 				14211F4228C9B99D00E74D30 /* RTest.swift in Sources */,
 				14CDC7EC289915610009358F /* RisingRouter.m in Sources */,
 				1477BE8D28D5B300001B1CFD /* UIColor+Rising.m in Sources */,
-				14CDC800289915710009358F /* RisingUIKitExtension.m in Sources */,
 				14CDC7E9289915610009358F /* RisingRouterResponse.m in Sources */,
 				14CDC7D8289911720009358F /* main.m in Sources */,
 				1474674F28CC914600141947 /* RisingRouterCS.m in Sources */,
+				1477BE9128D5B9BA001B1CFD /* RisingNetManager.m in Sources */,
 				142170F028D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */,
 				14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */,
 				14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */,

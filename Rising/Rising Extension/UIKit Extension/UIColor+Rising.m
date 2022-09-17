@@ -7,7 +7,7 @@
 
 #import "UIColor+Rising.h"
 
-@implementation UIColor (Rising)
+@implementation UIColor (Rising_YY)
 
 + (UIColor *)colorWithHexStringARGB:(NSString *)hexStr {
     NSUInteger length = hexStr.length;
@@ -23,6 +23,14 @@
     }
     
     return [UIColor colorWithHexString:str];
+}
+
+@end
+
+@implementation UIColor (Rising_DM)
+
++ (UIColor *)Light:(UIColor *)lightColor Dark:(UIColor *)darkColor {
+    return [UIColor dm_colorWithLightColor:lightColor darkColor:darkColor];
 }
 
 @end

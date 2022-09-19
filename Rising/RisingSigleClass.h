@@ -31,7 +31,7 @@ static id _instance = nil; \
 }
 
 #else // MRC
-#define implementationSingleton(name)  \
+#define RisingSigleClass_PROPERTY(name)  \
 static name *_instance = nil; \
 + (instancetype)share##name { \
     name *instance = [[self alloc] init]; \

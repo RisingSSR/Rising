@@ -30,8 +30,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = UIColor.whiteColor;
-    [self test];
     
+    [self.view addSubview:self.collectionView];
 }
 
 #pragma mark - Method
@@ -71,7 +71,7 @@
     MainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:MainCollectionViewCellReuseIdentifier forIndexPath:indexPath];
     
     cell.backgroundColor = UIColor.redColor;
-    
+    cell.superCollectionView = collectionView;
     
     return cell;
 }

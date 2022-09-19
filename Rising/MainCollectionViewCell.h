@@ -14,8 +14,9 @@ UIKIT_EXTERN NSString *MainCollectionViewCellReuseIdentifier;
 
 @interface MainCollectionViewCell : UICollectionViewCell
 
-/// <#description#>
-@property (nonatomic, strong) UICollectionView *collectionView;
+/// 代理
+@property (nonatomic, weak) UICollectionView *superCollectionView;
+
 
 @end
 

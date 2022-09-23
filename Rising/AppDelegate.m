@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#import "RisingRouter/RisingRouter+Extension.h"
+#import "MainController.h"
 
 @interface AppDelegate ()
 
@@ -17,8 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    UIViewController *vc = [[MainController alloc] init];
+    
     self.window = [[UIWindow alloc] init];
-    self.window.rootViewController = [self.router controllerForRouterPath:@"main"];
+    
+    self.window.rootViewController = vc;
+    
     [self.window makeKeyAndVisible];
     
     return YES;

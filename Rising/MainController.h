@@ -9,9 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainController : UIViewController <
-    RisingRouterHandler
->
+@interface MainController : UIViewController <UITableViewDelegate>
 
 @end
 

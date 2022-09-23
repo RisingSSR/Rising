@@ -33,32 +33,32 @@ static RisingRouter *_router;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.classChache = NSMutableDictionary.dictionary;
-        int count = objc_getClassList(NULL, 0);
-        Class *classes = (Class *)malloc(sizeof(Class) * count);
-        objc_getClassList(classes, count);
-        Protocol *p_handler = @protocol(RisingRouterHandler);
-        // ???: 存routerPath的方法是否有待加强
-        for (int i = 0; i < count; ++i) {
-            Class cls = classes[i];
-            for (Class thisCls = cls; thisCls;
-                thisCls = class_getSuperclass(thisCls)) {
-                
-                if (!class_conformsToProtocol(thisCls, p_handler)) {
-                    continue;
-                }
-                
-                NSArray <NSString *> *paths = [(id<RisingRouterHandler>)thisCls routerPath];
-                for (NSString *routerPath in paths) {
-                    self.classChache[routerPath] = thisCls;
-                }
-                
-                break;
-            }
-        }
-        if (classes) {
-            free(classes);
-        }
+//        self.classChache = NSMutableDictionary.dictionary;
+//        int count = objc_getClassList(NULL, 0);
+//        Class *classes = (Class *)malloc(sizeof(Class) * count);
+//        objc_getClassList(classes, count);
+//        Protocol *p_handler = @protocol(RisingRouterHandler);
+//        // ???: 存routerPath的方法是否有待加强
+//        for (int i = 0; i < count; ++i) {
+//            Class cls = classes[i];
+//            for (Class thisCls = cls; thisCls;
+//                thisCls = class_getSuperclass(thisCls)) {
+//
+//                if (!class_conformsToProtocol(thisCls, p_handler)) {
+//                    continue;
+//                }
+//
+//                NSArray <NSString *> *paths = [(id<RisingRouterHandler>)thisCls routerPath];
+//                for (NSString *routerPath in paths) {
+//                    self.classChache[routerPath] = thisCls;
+//                }
+//
+//                break;
+//            }
+//        }
+//        if (classes) {
+//            free(classes);
+//        }
     }
     return self;
 }
@@ -67,39 +67,95 @@ static RisingRouter *_router;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         _router = [[RisingRouter alloc] init];
+        Protocol *a;
     });
     return _router;
 }
 
 #pragma mark - Method
 
-- (void)handleRequest:(RisingRouterRequest *)request
-           complition:(RisingRouterCompletionBlock)completion {
+//- (void)handleRequest:(RisingRouterRequest *)request
+//           complition:(RisingRouterCompletionBlock)completion {
+//
+//    if ([self.requestObj isKindOfClass:UIViewController.class] && !request.requestController) {
+//        request.requestController = self.requestObj;
+//    }
+//
+//    Class <RisingRouterHandler> handlerObj = self.classChache[request.responsePath];
+//
+//    if (handlerObj) {
+//        __block RisingRouterResponse *response;
+//
+//        [handlerObj
+//         responseRequest:request
+//         completion:^(RisingRouterResponse *responseObj) {
+//            response = responseObj;
+//        }];
+//
+//        if (response) {
+//            response.responseClass = handlerObj;
+//        }
+//
+//        if (completion) {
+//            completion(request, response);
+//        }
+//    } else {
+//        NSAssert(handlerObj, @"路由失败，无响应对象");
+//    }
+//}
+
+@end
+
+@implementation RisingRouter (aa)
+
+- (UIViewController *)topViewController
+{
+    UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
     
-    if ([self.requestObj isKindOfClass:UIViewController.class] && !request.requestController) {
-        request.requestController = self.requestObj;
+    while (topController.presentedViewController) {
+        topController = topController.presentedViewController;
     }
     
-    Class <RisingRouterHandler> handlerObj = self.classChache[request.responsePath];
+    return topController;
+}
+
+- (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
+{
+    UINavigationController *navigationController = (UINavigationController *)[self topViewController];
     
-    if (handlerObj) {
-        __block RisingRouterResponse *response;
-        
-        [handlerObj
-         responseRequest:request
-         completion:^(RisingRouterResponse *responseObj) {
-            response = responseObj;
-        }];
-        
-        if (response) {
-            response.responseClass = handlerObj;
+    if ([navigationController isKindOfClass:[UINavigationController class]] == NO) {
+        if ([navigationController isKindOfClass:[UITabBarController class]]) {
+            UITabBarController *tabbarController = (UITabBarController *)navigationController;
+            navigationController = tabbarController.selectedViewController;
+            if ([navigationController isKindOfClass:[UINavigationController class]] == NO) {
+                navigationController = tabbarController.selectedViewController.navigationController;
+            }
+        } else {
+            navigationController = navigationController.navigationController;
         }
-        
-        if (completion) {
-            completion(request, response);
-        }
-    } else {
-        NSAssert(handlerObj, @"路由失败，无响应对象");
+    }
+    
+    if ([navigationController isKindOfClass:[UINavigationController class]]) {
+        [navigationController pushViewController:viewController animated:animated];
+    }
+}
+
+- (void)presentViewController:(UIViewController *)viewControllerToPresent animated:(BOOL)animated completion:(void (^ _Nullable)(void))completion
+{
+    UIViewController *viewController = [self topViewController];
+    if ([viewController isKindOfClass:[UINavigationController class]]) {
+        UINavigationController *navigationController = (UINavigationController *)viewController;
+        viewController = navigationController.topViewController;
+    }
+    
+    if ([viewController isKindOfClass:[UIAlertController class]]) {
+        UIViewController *viewControllerToUse = viewController.presentingViewController;
+        [viewController dismissViewControllerAnimated:false completion:nil];
+        viewController = viewControllerToUse;
+    }
+    
+    if (viewController) {
+        [viewController presentViewController:viewControllerToPresent animated:animated completion:completion];
     }
 }
 

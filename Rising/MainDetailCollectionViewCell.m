@@ -14,7 +14,9 @@ NSString *MainDetailCollectionViewCellReuseIdentifier = @"MainDetailCollectionVi
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        RisingDetailLog(@"%@", self);
+        static NSInteger i = 0;
+        RisingDetailLog(@"%ld", i);
+        i++;
     }
     return self;
 }

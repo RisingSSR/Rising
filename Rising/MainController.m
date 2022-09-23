@@ -11,6 +11,10 @@
 
 #import "MainDetailCollectionViewCell.h"
 
+#import "TestingCar.h"
+
+#import "MainProtocol.h"
+
 @interface MainController () <
     UICollectionViewDelegate,
     UICollectionViewDataSource,
@@ -24,6 +28,11 @@
 
 @implementation MainController
 
++ (void)load {
+//    RisingRouter *a;
+//    [a registClass:self protocol:@protocol(MainProtocol)];
+}
+
 #pragma mark - Life cycle
 
 - (void)viewDidLoad {
@@ -31,15 +40,63 @@
     
     self.view.backgroundColor = UIColor.whiteColor;
     
-    [self.view addSubview:self.collectionView];
+//    [self.view addSubview:self.collectionView];
+//    [self test];
+    [self test3];
 }
 
 #pragma mark - Method
+
+- (void)test3 {
+    CGRect r1 = CGRectMake(50, 130, 30, 30);
+    CGRect r2 = CGRectMake(30, 130, 80, 50);
+    BOOL t1 = CGRectIntersectsRect(r1, r2);
+    BOOL t2 = CGRectContainsRect(r1, r2);
+    RisingLog("🥹", @"%d - %d", t1, t2);
+    UILabel *lab1 = [[UILabel alloc] initWithFrame:r1];
+    lab1.text = @(t1).stringValue;
+    lab1.backgroundColor = UIColor.redColor;
+    
+    UILabel *lab2 = [[UILabel alloc] initWithFrame:r2];
+    lab2.text = @(t2).stringValue;
+    lab2.backgroundColor = UIColor.greenColor;
+    [self.view addSubview:lab2];
+    [self.view addSubview:lab1];
+}
+
+- (void)test2 {
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.locale = NSLocale.CN;
+    formatter.timeZone = NSTimeZone.CQ;
+    NSArray *t = formatter.shortWeekdaySymbols;
+    RisingLog("😀", @"%@", t);
+}
 
 - (void)test {
     NSString *str = [NSDate.date stringWithFormat:@"EEE" timeZone:NSTimeZone.CQ locale:NSLocale.CN];
     RisingDetailLog(@"%@", str);
 
+    UIView *A = [[UIView alloc] initWithFrame:CGRectMake(50, 100, 100, 100)];
+    A.backgroundColor = UIColor.redColor;
+    
+    UIView *B = [[UIView alloc] initWithFrame:CGRectMake(150, 150, 100, 100)];
+    B.backgroundColor = UIColor.greenColor;
+    
+    UIView *C = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    C.backgroundColor = UIColor.orangeColor;
+    
+    [A addSubview:C];
+    [B addSubview:C];
+    
+    [self.view addSubview:A];
+    [self.view addSubview:B];
+    NSDictionary *a;NSObject *b;
+    
+    TestingBase <TestingCar *> *base = [[TestingBase alloc] init];
+    [base test:^(TestingCar * _Nonnull item) {
+            
+    }];
+    
 }
 
 // MARK: SEL
@@ -97,42 +154,42 @@
     ];
 }
 
-+ (void)responseRequest:(RisingRouterRequest *)request completion:(RisingRouterResponseBlock)completion {
-    
-    RisingRouterResponse *response = [[RisingRouterResponse alloc] init];
-    
-    switch (request.requestType) {
-        case RouterRequestPush: {
-            
-            UINavigationController *nav = (request.requestController ? request.requestController : RisingRouterRequest.useTopController).navigationController;
-            
-            if (nav) {
-                MainController *vc = [[self alloc] init];
-                response.responseController = vc;
-                
-                [nav pushViewController:vc animated:YES];
-            } else {
-                
-                response.errorCode = RouterResponseWithoutNavagation;
-            }
-            
-        } break;
-            
-        case RouterRequestParameters: {
-            // TODO: 传回参数
-        } break;
-            
-        case RouterRequestController: {
-            
-            MainController *vc = [[self alloc] init];
-            
-            response.responseController = vc;
-        } break;
-    }
-    
-    if (completion) {
-        completion(response);
-    }
-}
+//+ (void)responseRequest:(RisingRouterRequest *)request completion:(RisingRouterResponseBlock)completion {
+//
+//    RisingRouterResponse *response = [[RisingRouterResponse alloc] init];
+//
+//    switch (request.requestType) {
+//        case RouterRequestPush: {
+//
+//            UINavigationController *nav = (request.requestController ? request.requestController : RisingRouterRequest.useTopController).navigationController;
+//
+//            if (nav) {
+//                MainController *vc = [[self alloc] init];
+//                response.responseController = vc;
+//
+//                [nav pushViewController:vc animated:YES];
+//            } else {
+//
+//                response.errorCode = RouterResponseWithoutNavagation;
+//            }
+//
+//        } break;
+//
+//        case RouterRequestParameters: {
+//            // TODO: 传回参数
+//        } break;
+//
+//        case RouterRequestController: {
+//
+//            MainController *vc = [[self alloc] init];
+//
+//            response.responseController = vc;
+//        } break;
+//    }
+//
+//    if (completion) {
+//        completion(response);
+//    }
+//}
 
 @end

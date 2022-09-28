@@ -21,6 +21,7 @@ target 'Rising' do
 	pod 'SDWebImage'
 	pod 'BeeHive'
 	pod 'CTMediator'
+pod 'WebViewJavascriptBridge', '~> 6.0'
 
 end
 

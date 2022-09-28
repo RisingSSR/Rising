@@ -35,6 +35,7 @@ PODS:
     - SQLiteRepairKit (~> 1.2.0)
     - WCDBOptimizedSQLCipher (~> 1.2.0)
   - WCDBOptimizedSQLCipher (1.2.1)
+  - WebViewJavascriptBridge (6.0.3)
   - YYKit (1.0.9):
     - YYKit/no-arc (= 1.0.9)
   - YYKit/no-arc (1.0.9)
@@ -51,6 +52,7 @@ DEPENDENCIES:
   - MJRefresh
   - SDWebImage
   - WCDB
+  - WebViewJavascriptBridge (~> 6.0)
   - YYKit
 
 SPEC REPOS:
@@ -70,6 +72,7 @@ SPEC REPOS:
     - SQLiteRepairKit
     - WCDB
     - WCDBOptimizedSQLCipher
+    - WebViewJavascriptBridge
     - YYKit
 
 SPEC CHECKSUMS:
@@ -88,8 +91,9 @@ SPEC CHECKSUMS:
   SQLiteRepairKit: 35aaae5a8838adb85f5b1eb4d796055be6060a4b
   WCDB: 8e90babdeb7784c569353a4bd22a66c0a175a882
   WCDBOptimizedSQLCipher: baf44493b0c7a3d49e97bc5b64a3856f6428ddd1
+  WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: bc8f577e77e6cd9f26c11be7a8261607e1d003ae
+PODFILE CHECKSUM: 9aa3334b576799a42623441dc1ce34c28ac180fa
 
 COCOAPODS: 1.11.3

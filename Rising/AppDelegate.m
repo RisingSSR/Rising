@@ -9,6 +9,8 @@
 
 #import "MainController.h"
 
+#import "WKViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,7 +19,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UIViewController *vc = [[MainController alloc] init];
+//    UIViewController *vc = [[MainController alloc] init];
+    UIViewController *vc = [[WKViewController alloc] init];
     
     self.window = [[UIWindow alloc] init];
     

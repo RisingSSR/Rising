@@ -42,10 +42,27 @@
     
 //    [self.view addSubview:self.collectionView];
 //    [self test];
-    [self test3];
+    [self test5];
 }
 
 #pragma mark - Method
+
+- (void)test5 {
+    NSNumberFormatter *formatter = NSNumberFormatter.new;
+    formatter.numberStyle = NSNumberFormatterSpellOutStyle;
+    formatter.locale = [NSLocale CN];
+    NSString *str = [formatter stringFromNumber:@2];
+    RisingLog("😀", @"%@", str);
+}
+
+- (void)test4 {
+    NSRange r1 = NSMakeRange(0, 2);
+    NSRange r2 = NSMakeRange(3, 2);
+    NSRange t1 = NSIntersectionRange(r1, r2);
+    NSRange t2 = NSUnionRange(r1, r2);
+    RisingLog("😅", @"%@", NSStringFromRange(t1));
+    RisingLog("😅", @"%@", NSStringFromRange(t2));
+}
 
 - (void)test3 {
     CGRect r1 = CGRectMake(50, 130, 30, 30);

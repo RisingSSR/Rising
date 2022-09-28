@@ -20,6 +20,8 @@
 		1422242428D9B2D5009A4A54 /* RisingUIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422242328D9B2D5009A4A54 /* RisingUIKitExtension.m */; };
 		1434662C28D43F03001DB1D0 /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1434662B28D43F03001DB1D0 /* MainCollectionViewCell.m */; };
 		1434662F28D43F32001DB1D0 /* MainDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */; };
+		1441B78828E307BC001E3227 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B78728E307BC001E3227 /* WKViewController.m */; };
+		1441B78B28E33A5E001E3227 /* CustomURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */; };
 		1474674F28CC914600141947 /* RisingRouterCS.m in Sources */ = {isa = PBXBuildFile; fileRef = 1474674E28CC914600141947 /* RisingRouterCS.m */; };
 		1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477BE8B28D5AFB6001B1CFD /* UIView+Rising.m */; };
 		1477BE8D28D5B300001B1CFD /* UIColor+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7FB289915710009358F /* UIColor+Rising.m */; };
@@ -85,6 +87,10 @@
 		1434662B28D43F03001DB1D0 /* MainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
 		1434662D28D43F32001DB1D0 /* MainDetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainDetailCollectionViewCell.h; sourceTree = "<group>"; };
 		1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainDetailCollectionViewCell.m; sourceTree = "<group>"; };
+		1441B78628E307BC001E3227 /* WKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
+		1441B78728E307BC001E3227 /* WKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
+		1441B78928E33A5E001E3227 /* CustomURLSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomURLSchemeHandler.h; sourceTree = "<group>"; };
+		1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomURLSchemeHandler.m; sourceTree = "<group>"; };
 		1474674D28CC914600141947 /* RisingRouterCS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingRouterCS.h; sourceTree = "<group>"; };
 		1474674E28CC914600141947 /* RisingRouterCS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RisingRouterCS.m; sourceTree = "<group>"; };
 		1477BE8A28D5AFB6001B1CFD /* UIView+Rising.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Rising.h"; sourceTree = "<group>"; };
@@ -197,6 +203,10 @@
 				1422240F28D99736009A4A54 /* MainProtocol.h */,
 				14CDC802289915BF0009358F /* MainController.h */,
 				14CDC803289915BF0009358F /* MainController.m */,
+				1441B78628E307BC001E3227 /* WKViewController.h */,
+				1441B78728E307BC001E3227 /* WKViewController.m */,
+				1441B78928E33A5E001E3227 /* CustomURLSchemeHandler.h */,
+				1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */,
 				1422240728D98D93009A4A54 /* TestingProtocol.h */,
 				1422240B28D98E4A009A4A54 /* TestingCar.h */,
 				1422240C28D98E4A009A4A54 /* TestingCar.m */,
@@ -208,7 +218,6 @@
 				1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */,
 				14211F4128C9B99D00E74D30 /* RTest.swift */,
 				14F989EA28D5D54A008DBF15 /* RisingNetManager */,
-				14F989E928D5C230008DBF15 /* RisingSigleClass.h */,
 				14CDC7DF289915610009358F /* RisingRouter */,
 				14CDC7ED289915710009358F /* Rising Extension */,
 				14CDC7DE2899145E0009358F /* RisingPCH.pch */,
@@ -244,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				1477BE8E28D5B94E001B1CFD /* RisingExtension.h */,
+				14F989E928D5C230008DBF15 /* RisingSigleClass.h */,
 				14CDC7EE289915710009358F /* Foundation Extension */,
 				14CDC7F4289915710009358F /* UIKit Extension */,
 			);
@@ -450,6 +460,7 @@
 			files = (
 				1434662F28D43F32001DB1D0 /* MainDetailCollectionViewCell.m in Sources */,
 				14CDC84428995E070009358F /* MinePresenter.m in Sources */,
+				1441B78828E307BC001E3227 /* WKViewController.m in Sources */,
 				14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */,
 				1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
@@ -464,6 +475,7 @@
 				1422242428D9B2D5009A4A54 /* RisingUIKitExtension.m in Sources */,
 				1477BE9128D5B9BA001B1CFD /* RisingNetManager.m in Sources */,
 				1422240D28D98E4A009A4A54 /* TestingCar.m in Sources */,
+				1441B78B28E33A5E001E3227 /* CustomURLSchemeHandler.m in Sources */,
 				142170F028D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */,
 				14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */,
 				1422240A28D98DAC009A4A54 /* TestingBase.m in Sources */,

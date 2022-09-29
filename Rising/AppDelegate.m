@@ -7,9 +7,8 @@
 
 #import "AppDelegate.h"
 
-#import "MainController.h"
-
-#import "WKViewController.h"
+#import "Rising Schedule/ScheduleController.h"
+#import "RisingRouter+Schedule.h"
 
 @interface AppDelegate ()
 
@@ -19,8 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-//    UIViewController *vc = [[MainController alloc] init];
-    UIViewController *vc = [[WKViewController alloc] init];
+    __block UIViewController *vc;
+    [self.router handleScheduleBlock:^(id<ScheduleRouterProtocol>  _Nonnull make) {
+        vc = [make controllerWithStylePush:YES panAllowed: YES];
+    }];
     
     self.window = [[UIWindow alloc] init];
     

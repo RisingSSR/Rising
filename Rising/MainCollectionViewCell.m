@@ -65,5 +65,4 @@ NSString *MainCollectionViewCellReuseIdentifier = @"MainCollectionViewCell";
     return CGSizeMake(20, 30);
 }
 
-
 @end

@@ -29,13 +29,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ScheduleInteractorWCDB : NSObject
 
 /// 绑定模型
-@property (nonatomic, strong, readonly) ScheduleCombineModel *bindModel;
+@property (nonatomic, strong, readonly) ScheduleCombineModel *combine;
 
 /// 存储路径（由绑定的模型决定）
 @property (nonatomic, readonly, class) NSString *DBPath;
 
-/// 表名
-@property (nonatomic, readonly, class) NSString *tableName;
+/// 数据表名字
+@property (nonatomic, readonly, copy) NSString *tableName;
+
+/// 强制替换
+- (void)replace;
 
 #pragma mark - Method
 
@@ -43,32 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)new NS_UNAVAILABLE;
 
-+ (instancetype)WCDBFromSno;
-
-- (instancetype)initWithBindModel:(ScheduleCombineModel *)model;
-
-- (void)save;
-
-
-
-
-
-
-/// 加入一类课程
-/// @param course 一类课程
-- (void)insertCourse:(ScheduleCourse *)course;
-
-/// 更新一类课程
-/// @param course 一类课程
-- (void)updateCourse:(ScheduleCourse *)course;
-
-/// 删除一类课程
-/// @param course 一类课程
-- (void)deleteCourse:(ScheduleCourse *)course;
-
-/// 通过学号获取课程
-/// @param num 学号
-- (NSArray <ScheduleCourse *> * _Nullable)courseAryForSno:(NSString *)num;
+- (instancetype)initWithSno:(NSString *)sno type:(ScheduleCombineType)type;
 
 @end
 

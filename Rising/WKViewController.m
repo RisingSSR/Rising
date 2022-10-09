@@ -34,11 +34,11 @@
         
         WKWebViewConfiguration *configuration = [WKWebViewConfiguration new];
         CustomURLSchemeHandler *handler = [[CustomURLSchemeHandler alloc]init];
-        [configuration setURLSchemeHandler:handler forURLScheme:@"www.baidu.com"];
+//        [configuration setURLSchemeHandler:handler forURLScheme:@"www.ids.cqupt.edu.cn/authserver/login"];//://ids.cqupt.edu.cn/authserver/login
 //        [configuration setURLSchemeHandler:handler forURLScheme:@"http"];
         
         _webView = [[WKWebView alloc] initWithFrame:self.view.SuperFrame configuration:configuration];
-        NSURL *url = [NSURL URLWithString:@"https://www.baidu.com"];
+        NSURL *url = [NSURL URLWithString:@"http://jwzx.cqupt.edu.cn/login.php"];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         
         [_webView loadRequest:request];
@@ -56,6 +56,9 @@
     "    "
     "     ";
     
+}
+
+- (void)webView:(WKWebView *)webView shouldStartLoadWithRequest:(nonnull NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
 }
 
 @end

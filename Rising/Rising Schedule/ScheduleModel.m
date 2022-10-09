@@ -34,10 +34,6 @@ typedef struct _ScheduleCombineEntry {
 - (instancetype)init {
     self = [super init];
     if (self) {
-//        _startDate =
-//        [NSDate dateWithString:[NSUserDefaults.standardUserDefaults stringForKey:RisingClassSchedule_classBegin_String] format:@"yyyy.M.d"];
-//
-//        self.nowWeek = [NSUserDefaults.standardUserDefaults stringForKey:RisingClassSchedule_nowWeek_Integer].unsignedLongValue;
         
         _courseAry = NSMutableArray.array;
         [_courseAry addObject:NSMutableArray.array]; // For 0 Section
@@ -132,10 +128,10 @@ typedef struct _ScheduleCombineEntry {
         
 //        [NSUserDefaults.standardUserDefaults setInteger:_nowWeek forKey:RisingClassSchedule_nowWeek_Integer];
 //        
-//        NSDate *date = NSDate.today;
-//        
-//        NSTimeInterval beforNow = (_nowWeek - 1) * 7 * 24 * 60 * 60 + (date.weekday - 2) * 24 * 60 * 60;
-//        _startDate = [NSDate dateWithTimeIntervalSinceNow:-beforNow];
+        NSDate *date = NSDate.date;
+        
+        NSTimeInterval beforNow = (_nowWeek - 1) * 7 * 24 * 60 * 60 + (date.weekday - 2) * 24 * 60 * 60;
+        _startDate = [NSDate dateWithTimeIntervalSinceNow:-beforNow];
 //    });
 }
 

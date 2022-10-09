@@ -32,9 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 // !!!: Source
 
-/// 学号
-@property (nonatomic, copy) NSString *sno;
-
 /// 课程名
 @property (nonatomic, copy) NSString *course;
 /// 课程别名（以后可能要用到）

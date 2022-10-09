@@ -44,6 +44,7 @@
 		1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477BE8B28D5AFB6001B1CFD /* UIView+Rising.m */; };
 		1477BE8D28D5B300001B1CFD /* UIColor+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7FB289915710009358F /* UIColor+Rising.m */; };
 		1477BE9128D5B9BA001B1CFD /* RisingNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1477BE9028D5B9BA001B1CFD /* RisingNetManager.m */; };
+		148EB50828EC01690051A88C /* WeekData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 148EB50728EC01690051A88C /* WeekData.swift */; };
 		14CDC7C7289911720009358F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7C6289911720009358F /* AppDelegate.m */; };
 		14CDC7D2289911720009358F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D1289911720009358F /* Assets.xcassets */; };
 		14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CDC7D3289911720009358F /* LaunchScreen.storyboard */; };
@@ -156,6 +157,8 @@
 		1477BE8E28D5B94E001B1CFD /* RisingExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingExtension.h; sourceTree = "<group>"; };
 		1477BE8F28D5B9BA001B1CFD /* RisingNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingNetManager.h; sourceTree = "<group>"; };
 		1477BE9028D5B9BA001B1CFD /* RisingNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RisingNetManager.m; sourceTree = "<group>"; };
+		148EB50728EC01690051A88C /* WeekData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekData.swift; sourceTree = "<group>"; };
+		148EB50928EC01AD0051A88C /* Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridge.h; sourceTree = "<group>"; };
 		14CDC7C2289911720009358F /* Rising.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rising.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CDC7C5289911720009358F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CDC7C6289911720009358F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -224,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				142170E928D1873A00B7B9B4 /* RisingWidget.swift */,
+				148EB50728EC01690051A88C /* WeekData.swift */,
+				148EB50928EC01AD0051A88C /* Bridge.h */,
 				142170EB28D1873A00B7B9B4 /* RisingWidget.intentdefinition */,
 				142170EC28D1873B00B7B9B4 /* Assets.xcassets */,
 				142170EE28D1873B00B7B9B4 /* Info.plist */,
@@ -234,43 +239,43 @@
 		1441B78C28E5ACC4001E3227 /* Rising Schedule */ = {
 			isa = PBXGroup;
 			children = (
+				1441B78E28E5ACC4001E3227 /* ScheduleRouterProtocol.h */,
+				1441B79328E5ACC4001E3227 /* RisingScheduleHeader.h */,
 				1441B7A928E5ACC4001E3227 /* RisingRouter+Schedule.h */,
 				1441B79D28E5ACC4001E3227 /* RisingRouter+Schedule.m */,
-				1441B79328E5ACC4001E3227 /* RisingScheduleHeader.h */,
+				1441B7A028E5ACC4001E3227 /* SchedulePresenter.h */,
+				1441B79228E5ACC4001E3227 /* SchedulePresenter.m */,
+				1441B79B28E5ACC4001E3227 /* ScheduleController.h */,
+				1441B7AB28E5ACC4001E3227 /* ScheduleController.m */,
 				1441B79C28E5ACC4001E3227 /* ScheduleCollectionHeaderView.h */,
 				1441B7AA28E5ACC4001E3227 /* ScheduleCollectionHeaderView.m */,
 				1441B79628E5ACC4001E3227 /* ScheduleCollectionLeadingView.h */,
 				1441B7AF28E5ACC4001E3227 /* ScheduleCollectionLeadingView.m */,
 				1441B79428E5ACC4001E3227 /* ScheduleCollectionViewCell.h */,
 				1441B7A628E5ACC4001E3227 /* ScheduleCollectionViewCell.m */,
+				1441B79128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.h */,
+				1441B7A128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m */,
 				1441B79E28E5ACC4001E3227 /* ScheduleCollectionViewLayout.h */,
 				1441B7A828E5ACC4001E3227 /* ScheduleCollectionViewLayout.m */,
-				1441B7AC28E5ACC4001E3227 /* ScheduleCombineModel.h */,
-				1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */,
-				1441B79B28E5ACC4001E3227 /* ScheduleController.h */,
-				1441B7AB28E5ACC4001E3227 /* ScheduleController.m */,
-				1441B78D28E5ACC4001E3227 /* ScheduleCourse.h */,
-				1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */,
-				1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */,
-				1441B7A428E5ACC4001E3227 /* ScheduleDiffProtocol.h */,
+				1441B79028E5ACC4001E3227 /* ScheduleServiceDataSource.h */,
+				1441B7A228E5ACC4001E3227 /* ScheduleServiceDataSource.m */,
+				1441B7AE28E5ACC4001E3227 /* ScheduleServiceDelegate.h */,
+				1441B79728E5ACC4001E3227 /* ScheduleServiceDelegate.m */,
+				1441B79528E5ACC4001E3227 /* ScheduleRequestType.h */,
+				1441B7B028E5ACC4001E3227 /* ScheduleRequestType.m */,
 				1441B78F28E5ACC4001E3227 /* ScheduleInteractorRequest.h */,
 				1441B7A328E5ACC4001E3227 /* ScheduleInteractorRequest.m */,
 				1441B7A528E5ACC4001E3227 /* ScheduleInteractorWCDB.h */,
 				1441B79F28E5ACC4001E3227 /* ScheduleInteractorWCDB.mm */,
 				1441B79828E5ACC4001E3227 /* ScheduleModel.h */,
 				1441B7AD28E5ACC4001E3227 /* ScheduleModel.m */,
-				1441B7A028E5ACC4001E3227 /* SchedulePresenter.h */,
-				1441B79228E5ACC4001E3227 /* SchedulePresenter.m */,
-				1441B79528E5ACC4001E3227 /* ScheduleRequestType.h */,
-				1441B7B028E5ACC4001E3227 /* ScheduleRequestType.m */,
-				1441B78E28E5ACC4001E3227 /* ScheduleRouterProtocol.h */,
-				1441B79028E5ACC4001E3227 /* ScheduleServiceDataSource.h */,
-				1441B7A228E5ACC4001E3227 /* ScheduleServiceDataSource.m */,
-				1441B7AE28E5ACC4001E3227 /* ScheduleServiceDelegate.h */,
-				1441B79728E5ACC4001E3227 /* ScheduleServiceDelegate.m */,
+				1441B7AC28E5ACC4001E3227 /* ScheduleCombineModel.h */,
+				1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */,
+				1441B7A428E5ACC4001E3227 /* ScheduleDiffProtocol.h */,
+				1441B78D28E5ACC4001E3227 /* ScheduleCourse.h */,
+				1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */,
+				1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */,
 				1441B7C528E5C76A001E3227 /* rowLessonDataArr */,
-				1441B79128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.h */,
-				1441B7A128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m */,
 			);
 			path = "Rising Schedule";
 			sourceTree = "<group>";
@@ -558,6 +563,7 @@
 			files = (
 				142170EF28D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */,
 				142170EA28D1873A00B7B9B4 /* RisingWidget.swift in Sources */,
+				148EB50828EC01690051A88C /* WeekData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +660,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ssr/Documents/SSR Program/Rising/RisingWidget/Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -684,6 +691,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/ssr/Documents/SSR Program/Rising/RisingWidget/Bridge.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

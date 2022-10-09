@@ -30,14 +30,14 @@ typedef NSString * ScheduleCombineType NS_STRING_ENUM;
 @property (nonatomic, copy, readonly) ScheduleCombineType combineType;
 
 /// 唯一标识
-/// （计算属性：sno + combineType)
+/// （计算属性：combineType + sno)
 @property (nonatomic, readonly) NSString *identifier;
+
+/// 课程信息
+@property (nonatomic, strong) NSMutableArray <ScheduleCourse *> *courseAry;
 
 /// 当周
 @property (nonatomic) NSInteger nowWeek;
-
-/// 数据模型
-@property (nonatomic, strong, nonnull) NSMutableArray <ScheduleCourse *> *courseAry;
 
 - (instancetype)init NS_UNAVAILABLE;
 

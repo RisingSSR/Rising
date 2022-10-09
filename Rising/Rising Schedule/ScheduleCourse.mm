@@ -40,7 +40,6 @@ WCDB_SYNTHESIZE(ScheduleCourse, courseID)
 WCDB_SYNTHESIZE(ScheduleCourse, rawWeek)
 WCDB_SYNTHESIZE(ScheduleCourse, type)
 
-WCDB_SYNTHESIZE(ScheduleCourse, sno)
 WCDB_SYNTHESIZE(ScheduleCourse, teacher)
 WCDB_SYNTHESIZE(ScheduleCourse, lesson)
 

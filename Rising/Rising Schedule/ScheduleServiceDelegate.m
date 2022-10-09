@@ -49,12 +49,13 @@
     for (NSDictionary *courceDictionary in lessonAry) {
         
         ScheduleCourse *course = [[ScheduleCourse alloc] initWithDictionary:courceDictionary];
-        course.sno = stuNum.copy;
+//        course.sno = stuNum.copy;
         
         [model.courseAry addObject:course];
     }
     
     [self.model combineModel:model];
+    self.model.nowWeek = model.nowWeek;
     
     [self.collectionView reloadData];
     

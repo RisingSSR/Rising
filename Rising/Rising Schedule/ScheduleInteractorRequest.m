@@ -57,7 +57,7 @@
                 for (NSDictionary *courceDictionary in lessonAry) {
                     
                     ScheduleCourse *course = [[ScheduleCourse alloc] initWithDictionary:courceDictionary];
-                    course.sno = stuNum.copy;
+//                    course.sno = stuNum.copy;
                     if ([key isEqualToString:ScheduleModelRequestCustom]) {
                         course.type = @"事务";
                     }

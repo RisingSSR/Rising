@@ -10,6 +10,8 @@
 #import "Rising Schedule/ScheduleController.h"
 #import "RisingRouter+Schedule.h"
 
+#import "WKViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -22,6 +24,7 @@
     [self.router handleScheduleBlock:^(id<ScheduleRouterProtocol>  _Nonnull make) {
         vc = [make controllerWithStylePush:YES panAllowed: YES];
     }];
+//    vc = [[WKViewController alloc] init];
     
     self.window = [[UIWindow alloc] init];
     

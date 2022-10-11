@@ -11,12 +11,34 @@
 #import <map>
 #import <vector>
 #import <array>
+#import <ranges>
 
 using namespace std;
 
 struct CombineConnectStatus {
     ScheduleCombineModel *combine;
     BOOL isConnect;
+    
+    CombineConnectStatus(ScheduleCombineModel *_combine) {
+        combine = _combine;
+        isConnect = YES;
+    }
+};
+
+struct ScheudleCourseExtension {
+    ScheduleCourse *course;
+    NSString *sno;
+    ScheduleCombineType type;
+    
+    ScheudleCourseExtension(ScheduleCourse *_course, NSString *_sno, ScheduleCombineType _type) {
+        course = _course;
+        sno = _sno;
+        type = _type;
+    }
+    
+    ScheudleCourseExtension(ScheduleCourse *_course, NSString *_sno) {
+        ScheudleCourseExtension(_course, _sno, ScheduleCombineSystem);
+    }
 };
 
 typedef map<NSValue *, ScheduleCourse *> DayRangeEntry;
@@ -44,12 +66,15 @@ typedef vector<WeekDrawEntry> DrawEntry;
     if (self) {
         _courseAry = NSArray.array;
         [self _clear];
+        
+        
+        
     }
     return self;
 }
 
 - (void)combineModel:(ScheduleCombineModel *)model transfrom:(BOOL)transfrom {
-    CombineConnectStatus status = {model, YES};
+    CombineConnectStatus status = CombineConnectStatus(model);
     _ccs.insert({model.identifier ,status});
     
     for (ScheduleCourse *course in model.courseAry) {
@@ -58,12 +83,17 @@ typedef vector<WeekDrawEntry> DrawEntry;
             NSValue *range = [NSValue valueWithRange:course.period];
             [self _check:section remake:NO];
             
+            // if origin is nil, everything can be add in
+            // untransfrom and uncustom can be sure about muti schedule
+            // if without sno, same as muti schedule
             if ((_drawEntry[section][course.inWeek][range] == nil) ||
-                (!transfrom && model.combineType == ScheduleCombineCustom)) {
+                (!transfrom && model.combineType != ScheduleCombineCustom) ||
+                (_sno == nil || [_sno isEqualToString:@""])) {
                 _drawEntry[section][course.inWeek][range] = course;
                 return;
             }
             
+            ScheudleCourseExtension extension = ScheudleCourseExtension(course, model.sno, model.combineType);
             
         }];
             

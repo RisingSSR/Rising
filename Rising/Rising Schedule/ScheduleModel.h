@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 开始的时间
 @property (nonatomic, readonly, nonnull) NSDate *startDate;
 
+/// 主学号
+@property (nonatomic, copy) NSString *sno;
+
 /// 当周
 /// 0代表整周
 /// setter里面为once
@@ -38,8 +41,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// 课程数组
 @property (nonatomic, readonly, nonnull) NSArray <NSArray <ScheduleCourse *> *> *courseAry;
 
-/// 连立一个模型
-/// 如果已经根据id连立，则取消该次连立
+/// 连立一个模型，并加入到具体显示中
+/// @param model 连立一个模型
+/// @param transfrom 是否需要转换
 - (void)combineModel:(ScheduleCombineModel *)model transfrom:(BOOL)transfrom;
 
 /// 再次建立联系

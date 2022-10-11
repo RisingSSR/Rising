@@ -163,22 +163,6 @@
     return course.period;
 }
 
-- (NSComparisonResult)collectionView:(UICollectionView *)collectionView
-                              layout:(ScheduleCollectionViewLayout *)layout
-              compareOriginIndexPath:(NSIndexPath *)originIndexPath
-               conflictWithIndexPath:(NSIndexPath *)conflictIndexPath
-                   relayoutWithBlock:(void (^)(NSRange originRange, NSRange comflictRange))block {
-    // TODO: Unknown
-    ScheduleCourse *originCourse = _model.courseAry[originIndexPath.section][originIndexPath.item];
-    ScheduleCourse *conflictCourse = _model.courseAry[conflictIndexPath.section][originIndexPath.item];
-    
-    if (NSEqualRanges(originCourse.period, conflictCourse.period)) {
-        return NSOrderedSame;
-    }
-    
-    return NSOrderedSame;
-}
-
 #pragma mark - <ScheduleCollectionHeaderViewDataSource>
 
 - (NSString *)scheduleCollectionHeaderView:(nonnull ScheduleCollectionHeaderView *)view

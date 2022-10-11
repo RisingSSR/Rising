@@ -35,7 +35,7 @@
 		1441B7BB28E5ACC4001E3227 /* ScheduleCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7A828E5ACC4001E3227 /* ScheduleCollectionViewLayout.m */; };
 		1441B7BC28E5ACC4001E3227 /* ScheduleCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7AA28E5ACC4001E3227 /* ScheduleCollectionHeaderView.m */; };
 		1441B7BD28E5ACC4001E3227 /* ScheduleController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7AB28E5ACC4001E3227 /* ScheduleController.m */; };
-		1441B7BE28E5ACC4001E3227 /* ScheduleModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7AD28E5ACC4001E3227 /* ScheduleModel.m */; };
+		1441B7BE28E5ACC4001E3227 /* ScheduleModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7AD28E5ACC4001E3227 /* ScheduleModel.mm */; };
 		1441B7BF28E5ACC4001E3227 /* ScheduleCollectionLeadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7AF28E5ACC4001E3227 /* ScheduleCollectionLeadingView.m */; };
 		1441B7C028E5ACC4001E3227 /* ScheduleRequestType.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7B028E5ACC4001E3227 /* ScheduleRequestType.m */; };
 		1441B7C328E5ACF4001E3227 /* HttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7C228E5ACF4001E3227 /* HttpTool.m */; };
@@ -133,7 +133,6 @@
 		1441B7A128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleSupplementaryCollectionViewCell.m; sourceTree = "<group>"; };
 		1441B7A228E5ACC4001E3227 /* ScheduleServiceDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleServiceDataSource.m; sourceTree = "<group>"; };
 		1441B7A328E5ACC4001E3227 /* ScheduleInteractorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleInteractorRequest.m; sourceTree = "<group>"; };
-		1441B7A428E5ACC4001E3227 /* ScheduleDiffProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleDiffProtocol.h; sourceTree = "<group>"; };
 		1441B7A528E5ACC4001E3227 /* ScheduleInteractorWCDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleInteractorWCDB.h; sourceTree = "<group>"; };
 		1441B7A628E5ACC4001E3227 /* ScheduleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCollectionViewCell.m; sourceTree = "<group>"; };
 		1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ScheduleCourse+WCTTableCoding.h"; sourceTree = "<group>"; };
@@ -142,7 +141,7 @@
 		1441B7AA28E5ACC4001E3227 /* ScheduleCollectionHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCollectionHeaderView.m; sourceTree = "<group>"; };
 		1441B7AB28E5ACC4001E3227 /* ScheduleController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleController.m; sourceTree = "<group>"; };
 		1441B7AC28E5ACC4001E3227 /* ScheduleCombineModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCombineModel.h; sourceTree = "<group>"; };
-		1441B7AD28E5ACC4001E3227 /* ScheduleModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleModel.m; sourceTree = "<group>"; };
+		1441B7AD28E5ACC4001E3227 /* ScheduleModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScheduleModel.mm; sourceTree = "<group>"; };
 		1441B7AE28E5ACC4001E3227 /* ScheduleServiceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleServiceDelegate.h; sourceTree = "<group>"; };
 		1441B7AF28E5ACC4001E3227 /* ScheduleCollectionLeadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCollectionLeadingView.m; sourceTree = "<group>"; };
 		1441B7B028E5ACC4001E3227 /* ScheduleRequestType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleRequestType.m; sourceTree = "<group>"; };
@@ -268,10 +267,9 @@
 				1441B7A528E5ACC4001E3227 /* ScheduleInteractorWCDB.h */,
 				1441B79F28E5ACC4001E3227 /* ScheduleInteractorWCDB.mm */,
 				1441B79828E5ACC4001E3227 /* ScheduleModel.h */,
-				1441B7AD28E5ACC4001E3227 /* ScheduleModel.m */,
+				1441B7AD28E5ACC4001E3227 /* ScheduleModel.mm */,
 				1441B7AC28E5ACC4001E3227 /* ScheduleCombineModel.h */,
 				1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */,
-				1441B7A428E5ACC4001E3227 /* ScheduleDiffProtocol.h */,
 				1441B78D28E5ACC4001E3227 /* ScheduleCourse.h */,
 				1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */,
 				1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */,
@@ -578,7 +576,7 @@
 				1441B78828E307BC001E3227 /* WKViewController.m in Sources */,
 				14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */,
 				1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */,
-				1441B7BE28E5ACC4001E3227 /* ScheduleModel.m in Sources */,
+				1441B7BE28E5ACC4001E3227 /* ScheduleModel.mm in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
 				14CDC804289915BF0009358F /* MainController.m in Sources */,
 				1441B7B928E5ACC4001E3227 /* ScheduleInteractorRequest.m in Sources */,

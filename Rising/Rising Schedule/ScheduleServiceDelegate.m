@@ -54,7 +54,7 @@
         [model.courseAry addObject:course];
     }
     
-    [self.model combineModel:model];
+//    [self.model combineModel:model];
     self.model.nowWeek = model.nowWeek;
     
     [self.collectionView reloadData];

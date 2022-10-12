@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "RisingSigleClass.h"
+#import "RisingSingleClass.h"
 
 #if __has_include(<AFNetworking.h>)
 #import <AFNetworking.h>
@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RisingNetManager : NSObject
 
-RisingSigleClass_PROPERTY(Manager);
+RisingSingleClass_PROPERTY(Manager)
 
 /// Base URL
 @property (nonatomic, strong) NSURL *baseURL;

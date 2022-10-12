@@ -8,6 +8,8 @@
 
 #import "ScheduleCombineModel.h"
 
+#import "ScheduleCourse+WCTTableCoding.h"
+
 ScheduleCombineType const ScheduleCombineSystem = @"system";
 
 ScheduleCombineType const ScheduleCombineCustom = @"custom";
@@ -42,6 +44,33 @@ ScheduleCombineType const ScheduleCombineCustom = @"custom";
 
 - (NSString *)identifier {
     return [NSString stringWithFormat:@"%@%@", _combineType, _sno];
+}
+
+@end
+
+@implementation ScheduleCombineModel (XXHB)
+
++ (NSString *)path {
+    NSString *pathComponent = [NSString stringWithFormat:@"/schedule/"];
+    return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:pathComponent];
+}
+
++ (WCTDatabase *)db {
+    static WCTDatabase *_db;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _db = [[WCTDatabase alloc] initWithPath:self.path];
+    });
+    return _db;
+}
+
+- (void)replace {
+    [self.class.db deleteAllObjectsFromTable:self.identifier];
+    [self.class.db insertObjects:self.courseAry into:self.identifier];
+}
+
+- (void)awake {
+    self.courseAry = [self.class.db getAllObjectsOfClass:ScheduleCourse.class fromTable:self.identifier].mutableCopy;
 }
 
 @end

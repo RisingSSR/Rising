@@ -11,7 +11,6 @@
 #import <map>
 #import <vector>
 #import <array>
-#import <ranges>
 
 using namespace std;
 
@@ -19,109 +18,91 @@ struct CombineConnectStatus {
     ScheduleCombineModel *combine;
     BOOL isConnect;
     
-    CombineConnectStatus(ScheduleCombineModel *_combine) {
-        combine = _combine;
-        isConnect = YES;
+    bool operator==(const CombineConnectStatus &other) const {
+        return ([combine.identifier isEqualToString:other.combine.identifier]);
+    }
+    
+    BOOL isValid() {
+        return (combine == nil);
     }
 };
 
-struct ScheudleCourseExtension {
+struct ScheudleCourseEntry {
     ScheduleCourse *course;
-    NSString *sno;
-    ScheduleCombineType type;
+    CombineConnectStatus *status;
     
-    ScheudleCourseExtension(ScheduleCourse *_course, NSString *_sno, ScheduleCombineType _type) {
-        course = _course;
-        sno = _sno;
-        type = _type;
-    }
-    
-    ScheudleCourseExtension(ScheduleCourse *_course, NSString *_sno) {
-        ScheudleCourseExtension(_course, _sno, ScheduleCombineSystem);
+    BOOL isValid() {
+        return (course == nil);
     }
 };
 
-typedef map<NSValue *, ScheduleCourse *> DayRangeEntry;
+typedef map<NSValue *, ScheudleCourseEntry> DayRangeEntry;
 typedef array<DayRangeEntry, 7> WeekDrawEntry;
 typedef vector<WeekDrawEntry> DrawEntry;
 
-#pragma mark - ScheduleModel ()
-
-@interface ScheduleModel ()
-
-/// 状态信息
-@property (nonatomic) std::map<NSString *, CombineConnectStatus> ccs;
-
-/// 绘制信息
-@property (nonatomic) DrawEntry drawEntry;
-
-@end
+NS_INLINE NSValue *NSValueFromRange(NSRange range) {
+    return [NSValue valueWithRange:range];
+}
 
 #pragma mark - ScheduleModel
 
-@implementation ScheduleModel
+@implementation ScheduleModel {
+    map<NSString *, CombineConnectStatus> _combineMap;
+    DrawEntry _drawEntry;
+}
 
 - (instancetype)init {
     self = [super init];
     if (self) {
         _courseAry = NSArray.array;
-        [self _clear];
-        
-        
         
     }
     return self;
 }
 
 - (void)combineModel:(ScheduleCombineModel *)model transfrom:(BOOL)transfrom {
-    CombineConnectStatus status = CombineConnectStatus(model);
-    _ccs.insert({model.identifier ,status});
+    if (!_combineMap[model.identifier].isValid()) {
+        [self _clear];
+    }
+    _combineMap.insert({model.identifier, {model, YES}});
     
     for (ScheduleCourse *course in model.courseAry) {
         [course.inSections enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, BOOL * __unused stop) {
-            NSInteger section = obj.longValue;
-            NSValue *range = [NSValue valueWithRange:course.period];
-            [self _check:section remake:NO];
+            NSInteger week = obj.longValue;
+            NSValue *rangeValue = NSValueFromRange(course.period);
+            [self _check:week];
             
-            // if origin is nil, everything can be add in
-            // untransfrom and uncustom can be sure about muti schedule
-            // if without sno, same as muti schedule
-            if ((_drawEntry[section][course.inWeek][range] == nil) ||
-                (!transfrom && model.combineType != ScheduleCombineCustom) ||
-                (_sno == nil || [_sno isEqualToString:@""])) {
-                _drawEntry[section][course.inWeek][range] = course;
-                return;
-            }
-            
-            ScheudleCourseExtension extension = ScheudleCourseExtension(course, model.sno, model.combineType);
-            
+            _drawEntry[week][course.inWeek - 1][rangeValue] = {course, &_combineMap[model.identifier]};
         }];
-            
     }
 }
 
-- (void)_check:(NSInteger)beAppend remake:(BOOL)remake {
-    static NSInteger lenth = _drawEntry.size();
-    lenth = remake ? 0 : lenth;
-    for (NSInteger i = lenth; i <= beAppend; i++) {
-        WeekDrawEntry entryW = {};
-        for (int i = 0; i < 7; i++) {
-            DayRangeEntry entryM = {};
-            entryW[i] = entryM;
-        }
-        _drawEntry.push_back(entryW);
+- (void)_check:(NSInteger)beAppend {
+    for (NSInteger i = _drawEntry.size(); i < beAppend; i++) {
+        _drawEntry.push_back({
+            DayRangeEntry(),
+            DayRangeEntry(),
+            DayRangeEntry(),
+            DayRangeEntry(),
+            DayRangeEntry(),
+            DayRangeEntry(),
+            DayRangeEntry()
+        });
     }
-    lenth = beAppend;
 }
-
 
 - (void)_clear {
-    map<NSString *, CombineConnectStatus> _map = {};
-    _ccs = _map;
-    vector<WeekDrawEntry> _draw = {};
-    _drawEntry = _draw;
+    
 }
 
+- (void)_compare:(ScheduleCourse *)course
+        withWeek:(NSInteger)week
+      withStatus:(const CombineConnectStatus )status {
+    NSValue *rangeValue = NSValueFromRange(course.period);
+//    if (_drawEntry[week][course.inWeek - 1].at(rangeValue)) {
+//        _drawEntry[week][course.inWeek - 1][rangeValue] = {course, &status};
+//    }
+}
 
 #pragma mark - Setter
 
@@ -131,7 +112,6 @@ typedef vector<WeekDrawEntry> DrawEntry;
     }
     _nowWeek = nowWeek;
     NSDate *date = NSDate.date;
-    
     NSTimeInterval beforNow = (_nowWeek - 1) * 7 * 24 * 60 * 60 + (date.weekday - 2) * 24 * 60 * 60;
     _startDate = [NSDate dateWithTimeIntervalSinceNow:-beforNow];
 }

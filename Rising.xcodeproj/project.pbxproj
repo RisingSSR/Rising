@@ -15,19 +15,13 @@
 		142170EF28D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 142170EB28D1873A00B7B9B4 /* RisingWidget.intentdefinition */; };
 		142170F028D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 142170EB28D1873A00B7B9B4 /* RisingWidget.intentdefinition */; };
 		142170F328D1873B00B7B9B4 /* RisingWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 142170E328D1873A00B7B9B4 /* RisingWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1422240A28D98DAC009A4A54 /* TestingBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422240928D98DAC009A4A54 /* TestingBase.m */; };
-		1422240D28D98E4A009A4A54 /* TestingCar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422240C28D98E4A009A4A54 /* TestingCar.m */; };
 		1422242428D9B2D5009A4A54 /* RisingUIKitExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 1422242328D9B2D5009A4A54 /* RisingUIKitExtension.m */; };
-		1434662C28D43F03001DB1D0 /* MainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1434662B28D43F03001DB1D0 /* MainCollectionViewCell.m */; };
-		1434662F28D43F32001DB1D0 /* MainDetailCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */; };
-		1441B78828E307BC001E3227 /* WKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B78728E307BC001E3227 /* WKViewController.m */; };
-		1441B78B28E33A5E001E3227 /* CustomURLSchemeHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */; };
+		143CB9BE28F5ACB000956567 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 143CB9BD28F5ACB000956567 /* ViewController.m */; };
 		1441B7B128E5ACC4001E3227 /* SchedulePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79228E5ACC4001E3227 /* SchedulePresenter.m */; };
 		1441B7B228E5ACC4001E3227 /* ScheduleServiceDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79728E5ACC4001E3227 /* ScheduleServiceDelegate.m */; };
 		1441B7B328E5ACC4001E3227 /* ScheduleCourse.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */; };
-		1441B7B428E5ACC4001E3227 /* ScheduleCombineModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */; };
+		1441B7B428E5ACC4001E3227 /* ScheduleCombineModel.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.mm */; };
 		1441B7B528E5ACC4001E3227 /* RisingRouter+Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79D28E5ACC4001E3227 /* RisingRouter+Schedule.m */; };
-		1441B7B628E5ACC4001E3227 /* ScheduleInteractorWCDB.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1441B79F28E5ACC4001E3227 /* ScheduleInteractorWCDB.mm */; };
 		1441B7B728E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7A128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m */; };
 		1441B7B828E5ACC4001E3227 /* ScheduleServiceDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7A228E5ACC4001E3227 /* ScheduleServiceDataSource.m */; };
 		1441B7B928E5ACC4001E3227 /* ScheduleInteractorRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441B7A328E5ACC4001E3227 /* ScheduleInteractorRequest.m */; };
@@ -54,8 +48,6 @@
 		14CDC7EC289915610009358F /* RisingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E7289915610009358F /* RisingRouter.m */; };
 		14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F0289915710009358F /* NSDate+Rising.m */; };
 		14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F1289915710009358F /* RisingFoundationExtention.m */; };
-		14CDC804289915BF0009358F /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC803289915BF0009358F /* MainController.m */; };
-		14CDC84428995E070009358F /* MinePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC84328995E070009358F /* MinePresenter.m */; };
 		14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14D0F25D28CC8C5C00C8B80B /* Test.mm */; };
 		F57CBEFF8EFB2D2137A76C93 /* Pods_Rising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */; };
 /* End PBXBuildFile section */
@@ -94,22 +86,10 @@
 		142170EB28D1873A00B7B9B4 /* RisingWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = RisingWidget.intentdefinition; sourceTree = "<group>"; };
 		142170EC28D1873B00B7B9B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		142170EE28D1873B00B7B9B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1422240728D98D93009A4A54 /* TestingProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingProtocol.h; sourceTree = "<group>"; };
-		1422240828D98DAC009A4A54 /* TestingBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingBase.h; sourceTree = "<group>"; };
-		1422240928D98DAC009A4A54 /* TestingBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingBase.m; sourceTree = "<group>"; };
-		1422240B28D98E4A009A4A54 /* TestingCar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestingCar.h; sourceTree = "<group>"; };
-		1422240C28D98E4A009A4A54 /* TestingCar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestingCar.m; sourceTree = "<group>"; };
 		1422240E28D995D8009A4A54 /* RisingRouterCompletionProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingRouterCompletionProtocol.h; sourceTree = "<group>"; };
-		1422240F28D99736009A4A54 /* MainProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainProtocol.h; sourceTree = "<group>"; };
 		1422242328D9B2D5009A4A54 /* RisingUIKitExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RisingUIKitExtension.m; sourceTree = "<group>"; };
-		1434662A28D43F03001DB1D0 /* MainCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCollectionViewCell.h; sourceTree = "<group>"; };
-		1434662B28D43F03001DB1D0 /* MainCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCollectionViewCell.m; sourceTree = "<group>"; };
-		1434662D28D43F32001DB1D0 /* MainDetailCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainDetailCollectionViewCell.h; sourceTree = "<group>"; };
-		1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainDetailCollectionViewCell.m; sourceTree = "<group>"; };
-		1441B78628E307BC001E3227 /* WKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WKViewController.h; sourceTree = "<group>"; };
-		1441B78728E307BC001E3227 /* WKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WKViewController.m; sourceTree = "<group>"; };
-		1441B78928E33A5E001E3227 /* CustomURLSchemeHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomURLSchemeHandler.h; sourceTree = "<group>"; };
-		1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomURLSchemeHandler.m; sourceTree = "<group>"; };
+		143CB9BC28F5ACB000956567 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		143CB9BD28F5ACB000956567 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1441B78D28E5ACC4001E3227 /* ScheduleCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCourse.h; sourceTree = "<group>"; };
 		1441B78E28E5ACC4001E3227 /* ScheduleRouterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleRouterProtocol.h; sourceTree = "<group>"; };
 		1441B78F28E5ACC4001E3227 /* ScheduleInteractorRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleInteractorRequest.h; sourceTree = "<group>"; };
@@ -123,17 +103,15 @@
 		1441B79728E5ACC4001E3227 /* ScheduleServiceDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleServiceDelegate.m; sourceTree = "<group>"; };
 		1441B79828E5ACC4001E3227 /* ScheduleModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleModel.h; sourceTree = "<group>"; };
 		1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScheduleCourse.mm; sourceTree = "<group>"; };
-		1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCombineModel.m; sourceTree = "<group>"; };
+		1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScheduleCombineModel.mm; sourceTree = "<group>"; };
 		1441B79B28E5ACC4001E3227 /* ScheduleController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleController.h; sourceTree = "<group>"; };
 		1441B79C28E5ACC4001E3227 /* ScheduleCollectionHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCollectionHeaderView.h; sourceTree = "<group>"; };
 		1441B79D28E5ACC4001E3227 /* RisingRouter+Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RisingRouter+Schedule.m"; sourceTree = "<group>"; };
 		1441B79E28E5ACC4001E3227 /* ScheduleCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCollectionViewLayout.h; sourceTree = "<group>"; };
-		1441B79F28E5ACC4001E3227 /* ScheduleInteractorWCDB.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ScheduleInteractorWCDB.mm; sourceTree = "<group>"; };
 		1441B7A028E5ACC4001E3227 /* SchedulePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SchedulePresenter.h; sourceTree = "<group>"; };
 		1441B7A128E5ACC4001E3227 /* ScheduleSupplementaryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleSupplementaryCollectionViewCell.m; sourceTree = "<group>"; };
 		1441B7A228E5ACC4001E3227 /* ScheduleServiceDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleServiceDataSource.m; sourceTree = "<group>"; };
 		1441B7A328E5ACC4001E3227 /* ScheduleInteractorRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleInteractorRequest.m; sourceTree = "<group>"; };
-		1441B7A528E5ACC4001E3227 /* ScheduleInteractorWCDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleInteractorWCDB.h; sourceTree = "<group>"; };
 		1441B7A628E5ACC4001E3227 /* ScheduleCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCollectionViewCell.m; sourceTree = "<group>"; };
 		1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ScheduleCourse+WCTTableCoding.h"; sourceTree = "<group>"; };
 		1441B7A828E5ACC4001E3227 /* ScheduleCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCollectionViewLayout.m; sourceTree = "<group>"; };
@@ -180,13 +158,8 @@
 		14CDC7FA289915710009358F /* UIColor+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Rising.h"; sourceTree = "<group>"; };
 		14CDC7FB289915710009358F /* UIColor+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Rising.m"; sourceTree = "<group>"; };
 		14CDC7FC289915710009358F /* RisingUIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingUIKitExtension.h; sourceTree = "<group>"; };
-		14CDC802289915BF0009358F /* MainController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		14CDC803289915BF0009358F /* MainController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		14CDC84228995E070009358F /* MinePresenter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinePresenter.h; sourceTree = "<group>"; };
-		14CDC84328995E070009358F /* MinePresenter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MinePresenter.m; sourceTree = "<group>"; };
 		14D0F25C28CC8C5C00C8B80B /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		14D0F25D28CC8C5C00C8B80B /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
-		14F989E928D5C230008DBF15 /* RisingSigleClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RisingSigleClass.h; sourceTree = "<group>"; };
 		22D3780331E63334F8D16391 /* Pods-Rising.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.release.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.release.xcconfig"; sourceTree = "<group>"; };
 		393C19EACBBEA0BF43A6E5A8 /* Pods-Rising.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.debug.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.debug.xcconfig"; sourceTree = "<group>"; };
 		D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Rising.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -264,12 +237,10 @@
 				1441B7B028E5ACC4001E3227 /* ScheduleRequestType.m */,
 				1441B78F28E5ACC4001E3227 /* ScheduleInteractorRequest.h */,
 				1441B7A328E5ACC4001E3227 /* ScheduleInteractorRequest.m */,
-				1441B7A528E5ACC4001E3227 /* ScheduleInteractorWCDB.h */,
-				1441B79F28E5ACC4001E3227 /* ScheduleInteractorWCDB.mm */,
 				1441B79828E5ACC4001E3227 /* ScheduleModel.h */,
 				1441B7AD28E5ACC4001E3227 /* ScheduleModel.mm */,
 				1441B7AC28E5ACC4001E3227 /* ScheduleCombineModel.h */,
-				1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.m */,
+				1441B79A28E5ACC4001E3227 /* ScheduleCombineModel.mm */,
 				1441B78D28E5ACC4001E3227 /* ScheduleCourse.h */,
 				1441B79928E5ACC4001E3227 /* ScheduleCourse.mm */,
 				1441B7A728E5ACC4001E3227 /* ScheduleCourse+WCTTableCoding.h */,
@@ -303,27 +274,10 @@
 			children = (
 				14CDC7C5289911720009358F /* AppDelegate.h */,
 				14CDC7C6289911720009358F /* AppDelegate.m */,
-				14CDC84228995E070009358F /* MinePresenter.h */,
-				14CDC84328995E070009358F /* MinePresenter.m */,
-				1422240F28D99736009A4A54 /* MainProtocol.h */,
-				14CDC802289915BF0009358F /* MainController.h */,
-				14CDC803289915BF0009358F /* MainController.m */,
-				1441B78628E307BC001E3227 /* WKViewController.h */,
-				1441B78728E307BC001E3227 /* WKViewController.m */,
-				1441B78928E33A5E001E3227 /* CustomURLSchemeHandler.h */,
-				1441B78A28E33A5E001E3227 /* CustomURLSchemeHandler.m */,
-				1422240728D98D93009A4A54 /* TestingProtocol.h */,
-				1422240B28D98E4A009A4A54 /* TestingCar.h */,
-				1422240C28D98E4A009A4A54 /* TestingCar.m */,
-				1422240828D98DAC009A4A54 /* TestingBase.h */,
-				1422240928D98DAC009A4A54 /* TestingBase.m */,
-				1434662A28D43F03001DB1D0 /* MainCollectionViewCell.h */,
-				1434662B28D43F03001DB1D0 /* MainCollectionViewCell.m */,
-				1434662D28D43F32001DB1D0 /* MainDetailCollectionViewCell.h */,
-				1434662E28D43F32001DB1D0 /* MainDetailCollectionViewCell.m */,
+				143CB9BC28F5ACB000956567 /* ViewController.h */,
+				143CB9BD28F5ACB000956567 /* ViewController.m */,
 				1441B7C128E5ACF4001E3227 /* HttpTool.h */,
 				1441B7C228E5ACF4001E3227 /* HttpTool.m */,
-				1441B7C428E5C6B6001E3227 /* RisingSingleClass.h */,
 				1441B78C28E5ACC4001E3227 /* Rising Schedule */,
 				14211F4128C9B99D00E74D30 /* RTest.swift */,
 				14F989EA28D5D54A008DBF15 /* RisingNetManager */,
@@ -362,7 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				1477BE8E28D5B94E001B1CFD /* RisingExtension.h */,
-				14F989E928D5C230008DBF15 /* RisingSigleClass.h */,
+				1441B7C428E5C6B6001E3227 /* RisingSingleClass.h */,
 				14CDC7EE289915710009358F /* Foundation Extension */,
 				14CDC7F4289915710009358F /* UIKit Extension */,
 			);
@@ -569,22 +523,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1434662F28D43F32001DB1D0 /* MainDetailCollectionViewCell.m in Sources */,
 				1441B7BC28E5ACC4001E3227 /* ScheduleCollectionHeaderView.m in Sources */,
-				14CDC84428995E070009358F /* MinePresenter.m in Sources */,
 				1441B7BA28E5ACC4001E3227 /* ScheduleCollectionViewCell.m in Sources */,
-				1441B78828E307BC001E3227 /* WKViewController.m in Sources */,
 				14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */,
 				1477BE8C28D5AFB6001B1CFD /* UIView+Rising.m in Sources */,
 				1441B7BE28E5ACC4001E3227 /* ScheduleModel.mm in Sources */,
 				14CDC7C7289911720009358F /* AppDelegate.m in Sources */,
-				14CDC804289915BF0009358F /* MainController.m in Sources */,
 				1441B7B928E5ACC4001E3227 /* ScheduleInteractorRequest.m in Sources */,
 				1441B7BB28E5ACC4001E3227 /* ScheduleCollectionViewLayout.m in Sources */,
-				1434662C28D43F03001DB1D0 /* MainCollectionViewCell.m in Sources */,
 				14211F4228C9B99D00E74D30 /* RTest.swift in Sources */,
 				14CDC7EC289915610009358F /* RisingRouter.m in Sources */,
-				1441B7B428E5ACC4001E3227 /* ScheduleCombineModel.m in Sources */,
+				143CB9BE28F5ACB000956567 /* ViewController.m in Sources */,
+				1441B7B428E5ACC4001E3227 /* ScheduleCombineModel.mm in Sources */,
 				1477BE8D28D5B300001B1CFD /* UIColor+Rising.m in Sources */,
 				1441B7BD28E5ACC4001E3227 /* ScheduleController.m in Sources */,
 				14CDC7E9289915610009358F /* RisingRouterResponse.m in Sources */,
@@ -596,18 +546,14 @@
 				1441B7BF28E5ACC4001E3227 /* ScheduleCollectionLeadingView.m in Sources */,
 				1422242428D9B2D5009A4A54 /* RisingUIKitExtension.m in Sources */,
 				1477BE9128D5B9BA001B1CFD /* RisingNetManager.m in Sources */,
-				1422240D28D98E4A009A4A54 /* TestingCar.m in Sources */,
-				1441B78B28E33A5E001E3227 /* CustomURLSchemeHandler.m in Sources */,
 				142170F028D1873B00B7B9B4 /* RisingWidget.intentdefinition in Sources */,
 				1441B7B328E5ACC4001E3227 /* ScheduleCourse.mm in Sources */,
 				1441B7B228E5ACC4001E3227 /* ScheduleServiceDelegate.m in Sources */,
 				1441B7B128E5ACC4001E3227 /* SchedulePresenter.m in Sources */,
 				1441B7B528E5ACC4001E3227 /* RisingRouter+Schedule.m in Sources */,
 				14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */,
-				1422240A28D98DAC009A4A54 /* TestingBase.m in Sources */,
 				14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */,
 				1441B7B828E5ACC4001E3227 /* ScheduleServiceDataSource.m in Sources */,
-				1441B7B628E5ACC4001E3227 /* ScheduleInteractorWCDB.mm in Sources */,
 				14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

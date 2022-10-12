@@ -29,15 +29,15 @@ typedef NSString * ScheduleCombineType NS_STRING_ENUM;
 /// 绑定类型，由“系统”/“自定义”决定
 @property (nonatomic, copy, readonly) ScheduleCombineType combineType;
 
+/// 当周
+@property (nonatomic) NSInteger nowWeek;
+
 /// 唯一标识
-/// （计算属性：combineType + sno)
+/// (计算属性：combineType + sno)
 @property (nonatomic, readonly) NSString *identifier;
 
 /// 课程信息
 @property (nonatomic, strong) NSMutableArray <ScheduleCourse *> *courseAry;
-
-/// 当周
-@property (nonatomic) NSInteger nowWeek;
 
 - (instancetype)init NS_UNAVAILABLE;
 
@@ -49,6 +49,25 @@ typedef NSString * ScheduleCombineType NS_STRING_ENUM;
 + (instancetype)combineWithSno:(NSString *)sno type:(ScheduleCombineType)type;
 
 @end
+
+/// !!!: 由于各种原因，这里建议查看飞书云文档
+
+#ifndef XXHB
+
+@interface ScheduleCombineModel (XXHB)
+
+/// 缓存
+@property (nonatomic, readonly, copy, class) NSString *path __deprecated_msg("⚠️");
+
+/// 替换缓存
+- (void)replace __deprecated_msg("⚠️");
+
+/// 从缓存中取
+- (void)awake __deprecated_msg("⚠️");
+
+@end
+
+#endif
 
 /// 系统
 FOUNDATION_EXPORT ScheduleCombineType const ScheduleCombineSystem;

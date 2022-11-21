@@ -22,6 +22,9 @@ target 'Rising' do
 	pod 'BeeHive'
 	pod 'CTMediator'
 pod 'WebViewJavascriptBridge', '~> 6.0'
+	pod 'CocoaMarkdown'
+
+	pod 'AppAuth'
 
 end
 

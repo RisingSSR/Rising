@@ -48,6 +48,8 @@
 		14CDC7EC289915610009358F /* RisingRouter.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7E7289915610009358F /* RisingRouter.m */; };
 		14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F0289915710009358F /* NSDate+Rising.m */; };
 		14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CDC7F1289915710009358F /* RisingFoundationExtention.m */; };
+		14D00B12290ABAAB0018B0D8 /* markdown_test.md in Resources */ = {isa = PBXBuildFile; fileRef = 14D00B11290ABAAB0018B0D8 /* markdown_test.md */; };
+		14D00B14290B61AD0018B0D8 /* SameUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D00B13290B61AD0018B0D8 /* SameUI.m */; };
 		14D0F25E28CC8C5C00C8B80B /* Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = 14D0F25D28CC8C5C00C8B80B /* Test.mm */; };
 		F57CBEFF8EFB2D2137A76C93 /* Pods_Rising.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6AE0A37B056AF5245DE0CA5 /* Pods_Rising.framework */; };
 /* End PBXBuildFile section */
@@ -158,6 +160,9 @@
 		14CDC7FA289915710009358F /* UIColor+Rising.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Rising.h"; sourceTree = "<group>"; };
 		14CDC7FB289915710009358F /* UIColor+Rising.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Rising.m"; sourceTree = "<group>"; };
 		14CDC7FC289915710009358F /* RisingUIKitExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RisingUIKitExtension.h; sourceTree = "<group>"; };
+		14D00B11290ABAAB0018B0D8 /* markdown_test.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = markdown_test.md; sourceTree = "<group>"; };
+		14D00B13290B61AD0018B0D8 /* SameUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SameUI.m; sourceTree = "<group>"; };
+		14D00B15290B61B70018B0D8 /* SameUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SameUI.h; sourceTree = "<group>"; };
 		14D0F25C28CC8C5C00C8B80B /* Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
 		14D0F25D28CC8C5C00C8B80B /* Test.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = Test.mm; sourceTree = "<group>"; };
 		22D3780331E63334F8D16391 /* Pods-Rising.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Rising.release.xcconfig"; path = "Target Support Files/Pods-Rising/Pods-Rising.release.xcconfig"; sourceTree = "<group>"; };
@@ -287,9 +292,12 @@
 				14CDC7D1289911720009358F /* Assets.xcassets */,
 				14CDC7D3289911720009358F /* LaunchScreen.storyboard */,
 				14CDC7D6289911720009358F /* Info.plist */,
+				14D00B11290ABAAB0018B0D8 /* markdown_test.md */,
 				14CDC7D7289911720009358F /* main.m */,
 				14D0F25C28CC8C5C00C8B80B /* Test.h */,
 				14D0F25D28CC8C5C00C8B80B /* Test.mm */,
+				14D00B15290B61B70018B0D8 /* SameUI.h */,
+				14D00B13290B61AD0018B0D8 /* SameUI.m */,
 				14211F4028C9B99D00E74D30 /* Rising-Bridging-Header.h */,
 			);
 			path = Rising;
@@ -461,6 +469,7 @@
 				14CDC7D5289911720009358F /* LaunchScreen.storyboard in Resources */,
 				1441B7C628E5C76A001E3227 /* rowLessonDataArr in Resources */,
 				14CDC7D2289911720009358F /* Assets.xcassets in Resources */,
+				14D00B12290ABAAB0018B0D8 /* markdown_test.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +561,7 @@
 				1441B7B128E5ACC4001E3227 /* SchedulePresenter.m in Sources */,
 				1441B7B528E5ACC4001E3227 /* RisingRouter+Schedule.m in Sources */,
 				14CDC7EB289915610009358F /* RisingRouterRequest.m in Sources */,
+				14D00B14290B61AD0018B0D8 /* SameUI.m in Sources */,
 				14CDC7FD289915710009358F /* NSDate+Rising.m in Sources */,
 				1441B7B828E5ACC4001E3227 /* ScheduleServiceDataSource.m in Sources */,
 				14CDC7FE289915710009358F /* RisingFoundationExtention.m in Sources */,

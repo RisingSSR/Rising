@@ -14,8 +14,15 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - AppAuth (1.5.0):
+    - AppAuth/Core (= 1.5.0)
+    - AppAuth/ExternalUserAgent (= 1.5.0)
+  - AppAuth/Core (1.5.0)
+  - AppAuth/ExternalUserAgent (1.5.0):
+    - AppAuth/Core
   - Base64 (1.1.2)
   - BeeHive (1.6.0)
+  - CocoaMarkdown (1.2.7)
   - CTMediator (46)
   - FluentDarkModeKit (1.0.4)
   - IGListDiffKit (4.0.0)
@@ -42,7 +49,9 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - AppAuth
   - BeeHive
+  - CocoaMarkdown
   - CTMediator
   - FluentDarkModeKit
   - IGListKit
@@ -58,8 +67,10 @@ DEPENDENCIES:
 SPEC REPOS:
   https://mirrors.tuna.tsinghua.edu.cn/git/CocoaPods/Specs.git:
     - AFNetworking
+    - AppAuth
     - Base64
     - BeeHive
+    - CocoaMarkdown
     - CTMediator
     - FluentDarkModeKit
     - IGListDiffKit
@@ -77,8 +88,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  AppAuth: 80317d99ac7ff2801a2f18ff86b48cd315ed465d
   Base64: cecfb41a004124895a7bcee567a89bae5a89d49b
   BeeHive: 64c01ddec33b9ef8813701e075eeb732327d0f75
+  CocoaMarkdown: c0c4707fd46ee03d5b662a3cd93560f0fe2b79b6
   CTMediator: f1cf58d509fb3192086c367711f039efd769b907
   FluentDarkModeKit: b6317653a00329564582884772ec57c4eaad1a1f
   IGListDiffKit: 665d6cf43ce726e676013db9c7d6c4294259b6b2
@@ -94,6 +107,6 @@ SPEC CHECKSUMS:
   WebViewJavascriptBridge: 7f5bc4d3581e672e8f32bd0f812d54bc69bb8e29
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9aa3334b576799a42623441dc1ce34c28ac180fa
+PODFILE CHECKSUM: 082e68f491aff5e71b968342f2eea938b806670f
 
 COCOAPODS: 1.11.3
